@@ -8,7 +8,6 @@
         <meta content="" name="keywords">
         <meta content="" name="description">
 
-        <!-- Template Stylesheet -->
         <link href="./asserts/css/styles.css" rel="stylesheet">
 
     </head>
@@ -57,7 +56,6 @@
 
                 <label for="approx" class="approximation">Approximately Your Payment Is</label>
                 <label for="appox_payment" class="approximation">xxxxxxxx</label>
-
 
                 <p>**This provides approximate rate on your vehicle. These rates can be negotiate after inspecting your vehicle</p>
             </div>   
