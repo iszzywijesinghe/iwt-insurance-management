@@ -8,7 +8,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <link href="./asserts/css/styles.css" rel="stylesheet">
+    <link href="./asserts/css/homestyles.css" rel="stylesheet">
 </head>
 
 <body>
