@@ -1,120 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Home-MotorGuard Insurance</title>
+            <meta content="width=device-width, initial-scale=1.0" name="viewport">
+            <meta content="" name="keywords">
+            <meta content="" name="description">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Home-MotorGuard Insurance</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
-
-        <!-- Template Stylesheet -->
-        <link href="./asserts/css/Regstylesheet.css" rel="stylesheet">
-
-
- 
-    </head>
-
-    <body>
-        <!--Restructure this with flexbox-->
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Home</title>
-        <link rel="stylesheet" href="Styles.css">
-    </head>
-    <body>
-    <nav>
-            <div class="logo">
-              <img src="your-logo.png" alt="Logo">
-            </div>
-            <ul>
-              <li><a href="Home.html">Home</a></li>
-              <li><a href="About Us.html">About Us</a></li>
-              <li><a href="Register.html">Register</a></li>
-              <li><a href="Contact Us.html">Contact Us</a></li>
-            </ul>
-            <div class="user-circle">U</div> 
-          </nav>
-
-        <h2>Register Now!!!</h2>
-        <p>Anemia is a major public health problem worldwide. Around 2.36 billion people, 30% of the 
-            world’s population, are affected by anemia and it is more prevalent among females (29.4%) 
-            compared to males (12.9%) (1). Hemoglobin concentration is used to assess the prevalence of 
-            anemia. Obesity also has been an epidemic in nearly every country in the world. 
-            Anthropometric measurements and lipid status are the best parameter in order to assess the 
-            magnitude of obesity.</p>
-
-    <section class=""container">
-    <form action="#" class="form">
-        <div class="input-box">
-            <label>Full Name(In block capitals):</label>
-            <input type="text">
-        </div>
-
-        <div class="input-box">
-            <label>Owner's NIC No:</label>
-            <input type="text">
-        </div>
-
-        <div class="input-box">
-            <label>Vehicle No:</label>
-            <input type="text">
-        </div>
-
-        <div class="input-box">
-            <label>Engine No:</label>
-            <input type="text">
-        </div>
-
-        <div class="input-box">
-            <label>Chassis No:</label>
-            <input type="text">
-        </div>
-
-        <div class="input-box">
-            <label>Vehicle Type:</label>
-            <input type="text">
-        </div>
-
-        <div class="input-box">
-            <label>Vehicle Model:</label>
-            <input type="text">
-        </div>
-
-        <div class="input-box">
-            <label>Year of Manufacture(YOM):</label>
-            <input type="text">
-        </div>
-
-        <div class="input-box">
-            <label>Vehicle Number:</label>
-            <input type="text">
-        </div>
-
-        <div class="input-box">
-            <label>Vehicle Value:</label>
-            <input type="text">
-        </div>
-
-        <div class="input-box">
-            <label>Insurance Type(Third Party/Full):</label>
-            <input type="text">
-        </div>
-
-        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-        
-       
-    </form>
-    </section>
-    <input type="checkbox" name="agree" class="checkbox">
-        <label for="agree" >I certify that the above information is true and that I agree to the terms & conditions mentiond in the insurance policy statement of the company.</label>
-
+            <link href="./asserts/css/homestyles.css" rel="stylesheet">
+        </head>
+        <body>  <!--top container-->
+            <div class="t_container">
                 
-        <button type="submit" class="registerbtn">Register</button>
-    
-    </body>
-</html>
-    </body>
+                    <div class="heading1">
+                        <h2>Welcome!</h2>
+                        <h1>Get Your Shield Today</h1>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" id="loginBtn">Login</button>
+                        <p class="text">or</p>
+                        <button type="button" id="signupBtn">Sign Up</button>
+                    </div>
+                </div>
+        
+                <!--bottom container-->
+                <div class="b_container">
+                    <div class="form">
+                        <h2>Want Emergency Estimate ?????</h2>
+        
+                        <label for="vBrand" class="form_label">Vehicle Brand</label>
+                        <input type="text" id="vBrand" name="vBrand">
+        
+                        <label for="iType" class="form_label">Insurance Type</label>
+                        <input type="text" id="iType" name="iType"><br>
+        
+                        <label for="vModel" class="form_label">Vehcile Model</label>
+                        <input type="text" id="vModel" name="vModel">
+        
+                        <label for="vNo" class="form_label">Vehicle No</label>
+                        <input type="text" id="vNo" name="vNo"><br>
+        
+                        <label for="yom" class="form_label">YOM</label>
+                        <input type="text" id="yom" name="yom">
+        
+                        <label for="vType" class="form_label">Vehicle Type</label>
+                        <input type="text" id="vType" name="vType"><br>
+        
+                        <label for="approx" class="approximation">Approximately Your Payment Is</label>
+                        <label for="appox_payment" class="approximation">xxxxxxxx</label>
+        
+                        <p>**This provides approximate rate on your vehicle. These rates can be negotiate after inspecting your vehicle</p>
+                    </div>   
+                </div>
+     <footer id="myfooter">
+        <div class="containerf">
+            <h3 class="footerhead">MotorGurad Insurance (PVT) Ltd</h3>
+            <h5 class="footerbody">22/B-402, Bank of Ceylon Mawatha, Colombo.</h5>
+            <h5 class="footerbody">+94 77 333 4444/ +94 112 333 444</h5>
+            <h5 class="footerbody">info@motoguard.insurance.lk</h5>
+            <div class="footlogo">
+                    <img src="./asserts/img/logo.png" alt="logo">
+            </div>
+        </div>
+        <div class="containerf2">
+            <h6>All Right Reserved. Develop and Maintain by MotorGuard Insurance IT</h6>
 
-</html>
+        </div>
+    </body>
+        </html>
