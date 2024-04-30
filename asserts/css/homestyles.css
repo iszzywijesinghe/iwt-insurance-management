@@ -1,13 +1,23 @@
-body {
-    margin: 0;
-    padding: 0;
+@charset "UTF-8";
+
+:root{
+    --max_width:1200px;
+}
+
+
+
+body{
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
 }
 
 /*top*/
 .t_container{
-    border: 2px solid black;
+    
     width: 100vw;
     height: 450px;
+    
 }
 .heading1 {
     position: absolute;
@@ -54,18 +64,19 @@ button:hover {
 
 /*bottom*/
 .b_container{
-    border: 2px solid black;
+    
     display: flex;
     align-items: center;
-    padding: 20px 20px;
+    
     background-color: darkblue;
+    width: 100vw;
 }
 .div1 {
     font-weight: bold;
 }
 
 .vertical-line {
-    border-left: 3px solid black;
+    
     height: 80vh;
     margin: 0 60px;
 }
@@ -115,9 +126,10 @@ button:hover {
 
 /*footer*/
 .f_container{
-    border: 2px solid black;
+    
     width: 100vw;
     height: fit-content;
+    
 }
 
 footer{
@@ -125,20 +137,17 @@ footer{
     bottom: 0;
     left: 0;
     width: 100vw;
-    
+
 
 }
 .footlogo{
-    z-index :2; 
-    border: 1px sollid white;
+    
     position: fixed;
     top: 76%;
     left: 22%;
     height: fit-content;
     width: fit-content;
-    transform: translateY(5px);
-
-    
+    transform: translateY(5px);  
 }
 
 .footlogo img{
@@ -158,13 +167,15 @@ h5.footerbody{
 
 .containerf{
     
-    border:2px solid black;
+    
     height: fit-content;
     padding: 30px;
     padding-left: 500px;
     margin-bottom:0;
     color: white;
     background-color: darkblue;
+    
+    
     
 }
 
@@ -181,12 +192,10 @@ h5.footerbody{
     margin: 0 auto;
     transform: translateZ(20px);
     margin-bottom: 0;
+    
 }
 
 .myfooter{
     margin-bottom: 0;
 }
-
-
-
 
