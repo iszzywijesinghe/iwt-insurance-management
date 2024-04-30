@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Home-MotorGuard Insurance</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+<head>
+    <meta charset="utf-8">
+    <title>Home-MotorGuard Insurance</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-        <link href="./asserts/css/styles.css" rel="stylesheet">
+    <link href="./asserts/css/styles.css" rel="stylesheet">
+</head>
 
-    </head>
+<body>
 
-    <body>
-        <!--Restructure this with flexbox-->
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Home</title>
-        <link rel="stylesheet" href="Styles.css">
-    </head>
-    <body>
-        <div class="top">
+    <!--top container-->
+    <div class="t_container">
+        
             <div class="heading1">
                 <h2>Welcome!</h2>
                 <h1>Get Your Shield Today</h1>
@@ -32,7 +26,9 @@
                 <button type="button" id="signupBtn">Sign Up</button>
             </div>
         </div>
-        <div class="bottom">
+
+        <!--bottom container-->
+        <div class="b_container">
             <div class="form">
                 <h2>Want Emergency Estimate ?????</h2>
 
@@ -60,9 +56,26 @@
                 <p>**This provides approximate rate on your vehicle. These rates can be negotiate after inspecting your vehicle</p>
             </div>   
         </div>
-        <script src="Script.js"></script>
-    </body>
-</html>
-    </body>
+
+        <!--footer container-->
+        <div class="f_container">
+            <footer id="myfooter">
+                <div class="containerf">
+                    <h3 class="footerhead">MotorGurad Insurance (PVT) Ltd</h3>
+                    <h5 class="footerbody">22/B-402, Bank of Ceylon Mawatha, Colombo.</h5>
+                    <h5 class="footerbody">+94 77 333 4444/ +94 112 333 444</h5>
+                    <h5 class="footerbody">info@motoguard.insurance.lk</h5>
+                    <div class="footlogo">
+                        <img src="./asserts/img/logo.png" alt="logo">
+                    </div>
+                </div>
+                <div class="containerf2">
+                    <h6>All Right Reserved. Develop and Maintain by MotorGuard Insurance IT</h6>
+
+                </div>
+
+
+</body>
+
 
 </html>
