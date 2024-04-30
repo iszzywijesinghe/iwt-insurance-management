@@ -36,8 +36,9 @@
 
                         <label for="Name">Message</label><br>
                         <textarea id="message" rows="7" cols="30"></textarea><br>
+    
+                        <button type="submit">Register</button>
                     </form>
-                    <button>Register</button>
                 </div>
             </div>  
         </div>
