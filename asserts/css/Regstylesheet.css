@@ -1,113 +1,147 @@
 @charset "UTF-8";
 
+:root {
+    --max_width: 1200px;
+}
+
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: rgb(72, 115, 207);
-  }
-  nav {
-    background-color: #0e1079;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  nav .logo {
-    flex: 1;
-  }
-  nav ul {
-    list-style-type: none;
-    margin: 0;
     padding: 0;
-    display: flex;
-  }
-  nav ul li {
-    margin-right: 20px;
-  }
-  nav ul li a {
+    overflow-x: hidden;
+}
+
+/*navbar_container*/
+.navbar_container{
+    
+    width: 100vw;
+    height: 100px;
+}
+
+/*image container*/
+.img_container {
+    
+    width: 100vw;
+    height: 460px;
+}
+.car_image{
+    width: 100vw;
+    height: 460px;
+
+}
+
+/*center_container*/
+.center_container {
+    
+    width: 100vw;
+    height: 730px;
+    background-color: darkblue;
+    padding-top: 30px;
+}
+.form_container{
+    
+    width: 1000px;
+    height: 680px;
+    text-align: center;
+    margin-left: 250px;
+    margin-right: 250px;
+    
     color: white;
-    text-decoration: none;
-  }
-  .user-circle {
-    background-color: #fff;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    
+}
+.terms{
+    color: white;
+}
+
+.lable_name{
+    
+    
+}
+
+.form_only{
+    
+    margin-left: 300px;
+    text-align: center;
+    width: fit-content;
+}
+
+/*footer_container*/
+.footer_container{
+    
+    width: 100vw;
+    height: 150px;
+    
+}
+.f_container{
+    
+    width: 100vw;
+    height: fit-content;
+    
+}
+
+footer{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+
+
+}
+.footlogo{
+    
+    position: fixed;
+    top: 76%;
+    left: 22%;
+    height: fit-content;
+    width: fit-content;
+    transform: translateY(5px);  
+}
+
+.footlogo img{
+    height: 140px;
+    width: 140px;
+}
+
+h3.footerhead{
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+h5.footerbody{
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.containerf{
+    
+    
+    height: fit-content;
+    padding: 30px;
+    padding-left: 500px;
+    margin-bottom:0;
+    color: darkblue;
+    background-color: white;
+    
+    
+    
+}
+
+.containerf2{
+
+    height: 30px;
+    color: white;
+    background-color: darkblue;
+    text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #333;
-    font-weight: bold;
-  }
-
-h2
-{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+    margin: 0 auto;
+    transform: translateZ(20px);
+    margin-bottom: 0;
+    
 }
 
-p
-{
-    color: #fff;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-}
-
-.form
-{
-    border-radius: 10px;
-    align-content: center;
-    justify-content: center;
-}
-
-label
-{
-    color: #fff;
-    width:235px;
-    display: inline-block;
-    margin: 10px;
-    padding-left:35%;
-    font-style: oblique;
-    align-items: center;
-}
-
-.registerbtn {
-  background-color: white;
-  color: blue;
-  padding: 10px 30px;
-  margin: 10px 0;
-  border: none;
-  cursor: pointer;
-  width: 10%;
-  opacity: 0.9;
-  align: center;
-}
-
-.registerbtn:hover
-{
-  opacity: 1;
-}
-
-.vertical-center {
-  left:50%;
-  right:50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.checkbox
-{
-  align-self: center;
-}
-.container
-{
-    align-content: center;
-}
-
-
-.input-box
-{
-    border: 2px;
-    align-items: center;
-    justify-content: center;
+.myfooter{
+    margin-bottom: 0;
 }
