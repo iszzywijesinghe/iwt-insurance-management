@@ -50,17 +50,20 @@
                             <th>Accident Grade</th>
                         </tr>
                     </thead>
-                    <!-- <tbody>
-                        <?php while ($row = viewClams()) {
-                            echo "<tr>";
-                            echo "<td>" . $row["claim_id"] . "</td>";
-                            echo "<td>" . $row["vehicle_no"] . "</td>";
-                            echo "<td>" . $row["vehicle_photos"] . "</td>";
-                            echo "<td>" . $row["date"] . "</td>";
-                            echo "<td>" . $row["accident_grade"] . "</td>";
-                            echo "</tr>";
+                    <tbody>
+                        <?php
+                        if (viewClams()->num_rows > 0) {
+                            foreach (viewClams()->fetch_all() as $clam) {
+                                echo "<tr>";
+                                echo "<td>" . $clam[0] . "</td>";
+                                echo "<td>" . $clam[1] . "</td>";
+                                echo "<td>" . $clam[2] . "</td>";
+                                echo "<td>" . $clam[3] . "</td>";
+                                echo "<td>" . $clam[4] . "</td>";
+                                echo "</tr>";
+                            }
                         } ?>
-                    </tbody> -->
+                    </tbody>
                 </table>
             </div>
         </div>
