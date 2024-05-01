@@ -4,14 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>login</title>
-        <link rel="stylesheet" href="./asserts/css/login.css">
+        <link rel="stylesheet" href="../asserts/css/login.css">
     </head>
     <body>
 
 <div class="container">
-            <div class="logo">
-                <img width="50px" height="50px" src="">
-            </div>
+            
+            
             <div class="signup_card">
                 <h1>Login</h1>
                 <form action="" method="post">
