@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+:root{
+    --max_width:1200px;
+}
+
+
+
+body{
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+
+/*top*/
+.t_container{
+    
+    width: 100vw;
+    height: 550px;
+    
+}
+.heading1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.buttons {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    background-color: darkblue;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 120px;
+}
+
+button:hover {
+    background-color: black;
+}
+
+.heading1 h1 {
+    margin-top: 0px;
+}
+
+.heading1 h2 {
+    margin-bottom: 0px;
+}
+
+.text {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+
+
+/*bottom*/
+.b_container{
+    
+    display: flex;
+    align-items: center;
+    
+    background-color: darkblue;
+    width: 100vw;
+}
+.div1 {
+    font-weight: bold;
+}
+
+.vertical-line {
+    
+    height: 80vh;
+    margin: 0 60px;
+}
+
+.value {
+    font-weight: bold;
+}
+
+.details1 {
+    margin-bottom: 8px;
+}
+
+.details2 {
+    margin-bottom: 30px;
+}
+
+.editBtn {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.form{
+    text-align: center;
+    margin-left: 25%;
+    margin-right: auto;
+    color: white;
+}
+
+.form_label {
+    width: 100px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.form h2 {
+    text-align: center;
+}
+
+.form input[type="text"] {
+    margin-right: 60px;
+}
+
+
+
+
+
+
+/*footer*/
+.f_container{
+    
+    width: 100vw;
+    height: fit-content;
+    
+}
+
+footer{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+
+
+}
+.footlogo{
+    
+    position: fixed;
+    top: 76%;
+    left: 22%;
+    height: fit-content;
+    width: fit-content;
+    transform: translateY(5px);  
+}
+
+.footlogo img{
+    height: 140px;
+    width: 140px;
+}
+
+h3.footerhead{
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+h5.footerbody{
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.containerf{
+    
+    
+    height: fit-content;
+    padding: 30px;
+    padding-left: 500px;
+    margin-bottom:0;
+    color: white;
+    background-color: darkblue;
+    
+    
+    
+}
+
+.containerf2{
+
+    height: 30px;
+    color: darkblue;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transform: translateZ(20px);
+    margin-bottom: 0;
+    
+}
+
+.myfooter{
+    margin-bottom: 0;
+}
+
