@@ -40,6 +40,10 @@
             <?php include ("../partials/user-dashboard-navbar-md.php"); ?>
             <br>
             <div class="col-sm-9">
+                <button style="margin-bottom: 45px;" type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                    data-target="#myModal">
+                    Add Clams</button>
+
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -65,6 +69,51 @@
                         } ?>
                     </tbody>
                 </table>
+
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Add Clams</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/action_page.php">
+                                    <div class="form-group">
+                                        <label>Vehicle No</label>
+                                        <input type="text" class="form-control" id="v-no" placeholder="Enter Vehicle no"
+                                            name="v-no">
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- TODO: Should be a file uploader -->
+                                        <label>Vehicle Photos</label>
+                                        <input type="text" class="form-control" id="v-photos"
+                                            placeholder="Enter Vehicle Photos" name="v-photos">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Date</label>
+                                        <input type="date" class="form-control" id="vNo" placeholder="Enter Date"
+                                            name="v-date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Grade</label>
+                                        <select class="form-select form-select-lg">
+                                            <option>A</option>
+                                            <option>B</option>
+                                            <option>C</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn btn-default">Add</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>

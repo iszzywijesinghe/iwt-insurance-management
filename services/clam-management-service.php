@@ -16,4 +16,13 @@ function viewClams()
         echo $e->getMessage();
     }
 }
+
+function addClams()
+{
+    try {
+        $insertQuery = "";
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+}
 ?>
