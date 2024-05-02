@@ -47,19 +47,23 @@ body{
     padding: 10px 20px;
 }
 
+.box-border{
+    border: 2px solid black;
+}
+
 .container1{
     border: 2px solid black;
-    width: 350px;
-    height: 100px;
-    margin-left: 900px;
+    /* width: 350px; */
+    /* height: 100px; */
+    /* margin-left: 900px; */
 }
 
 .container2{
     
     border: 2px solid black;
-    width: 350px;
-    height: 100px;
-    margin-left: 100px;
+    /* width: 350px; */
+    /* height: 100px; */
+    /* margin-left: 100px; */
 }
 
 .about{
@@ -216,11 +220,15 @@ h5.footerbody{
 }
 
 .teamcontainer{
-    border: 3px solid black ; 
-    width: 100vw;
-    height: 500px;
-    margin-top: 20px;
-    
+    /* border: 3px solid black ;  */
+    /* width: 100vw; */
+    /* height: 500px; */
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .imghcontainer{
