@@ -29,7 +29,7 @@
                     Established in 1997 as a state owned corporation and the pioneer insurer in the country, MotorGuard Insurance today manages an asset base of over LKR 313.2 billion which is the largest in the industry, the largest vehicle insurance fund in the local insurance industry amounting in excess of LKR 181.9 billion, and a LKR 6 billion strong capitalization, making us one of the most secure and reliable insurance solutions providers in the country.
 
                 </p>
-                <!-- <a href="" class="read-more">Read More</a> -->
+                <!-- <a href="" class="read-more">Read More  </a> -->
             </div>
         </section>
     </div>
@@ -46,8 +46,8 @@
     <div class="teamcontainer">
         <div style="display: flex; flex-direction: row; gap: 30px; align-items: center;">
             <div style="background-color: red; width: 200px; height: 200px;">
-        <img src="" alt="">
-        <h4>>ceo</h4>
+        <img src="../asserts/img/admin.jpg " alt="" width="200px" height="200px">
+        <h4 style="text-align: center;"> ceo</h4>
         </div>
             <div style="background-color: red; width: 200px; height: 200px;">Item Two</div>
             <div style="background-color: red; width: 200px; height: 200px;">Item Three</div>
