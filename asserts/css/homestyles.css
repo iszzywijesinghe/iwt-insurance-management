@@ -15,7 +15,7 @@ body{
 /*navbar_container*/
 .navbar_container{
     
-    border: 2px solid black;
+    
     width: 100vw;
     height: 100px;
 }
@@ -144,12 +144,6 @@ button:hover {
 }
 
 
-
-
-
-
-
-
 /*footer*/
 .f_container{
     
@@ -225,4 +219,3 @@ h5.footerbody{
     margin-bottom: 0;
 }
 
-<link href="./asserts/css/homestyles.css" rel="stylesheet">

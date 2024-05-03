@@ -9,18 +9,21 @@
 
             <link href="./asserts/css/homestyles.css" rel="stylesheet">
         </head>
+        
         <body> 
     
              <!--navbar container-->
-             <div class="navbar_container"> </div>
+             <div class="navbar_container"> 
+
+             </div>
 
             <!--top container-->
             <div class="t_container">
 
                  <!--image container-->
-            <div class="img_container"> 
+                 <div class="img_container"> 
                 <img class="car_image" src = "./asserts/img/home img.jpg">
-            </div>
+                 </div>
                 
                     <div class="heading1">
                         <h2>Welcome!</h2>
