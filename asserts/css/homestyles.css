@@ -12,24 +12,47 @@ body{
     overflow-x: hidden;
 }
 
-/*top*/
-.t_container{
+/*navbar_container*/
+.navbar_container{
+    
+    border: 2px solid black;
+    width: 100vw;
+    height: 100px;
+}
+
+/*image container*/
+.img_container {
     
     width: 100vw;
-    height: 550px;
+    height: 460px;
+    background-color: darkblue;
+}
+.car_image{
+    width: 100vw;
+    height: 460px;
+    opacity: 80%;
+
+}
+
+/*top*/
+.t_container{
+    border: 2px solid black;
+    width: 100vw;
+    height: 460px;
     
 }
 .heading1 {
     position: absolute;
-    top: 30%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    color: white;
 }
 
 .buttons {
     position: absolute;
-    top: 43%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -44,7 +67,8 @@ button {
 }
 
 button:hover {
-    background-color: black;
+    background-color: white;
+    color: darkblue;
 }
 
 .heading1 h1 {
@@ -118,6 +142,8 @@ button:hover {
 .form input[type="text"] {
     margin-right: 60px;
 }
+
+
 
 
 
@@ -198,4 +224,5 @@ h5.footerbody{
 .myfooter{
     margin-bottom: 0;
 }
+
 
