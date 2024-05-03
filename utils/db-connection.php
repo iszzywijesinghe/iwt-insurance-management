@@ -6,9 +6,12 @@ function getConnectionInstance()
         $host = "localhost";
         $username = "root";
         $password = "";
-        return (mysqi_connect($host, $username, $password));
+        $database = "isdm-insurance-management";
+        $conn = mysqli_connect($host, $username, $password);
+        mysqli_select_db($conn,$database);
+        return $conn;
     } catch (Exception $e) {
-        echo ($e);
+        echo $e->getMessage();
     }
 }
 ?>

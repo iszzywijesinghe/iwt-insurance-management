@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="../asserts/css/styles1.css">
+        <link rel="stylesheet" type="text/css" href="../asserts/css/contact-us-styles.css">
     </head>
     <body>
         <div class="container">
@@ -36,8 +36,9 @@
 
                         <label for="Name">Message</label><br>
                         <textarea id="message" rows="7" cols="30"></textarea><br>
+    
+                        <button type="submit">Register</button>
                     </form>
-                    <button>Register</button>
                 </div>
             </div>  
         </div>
