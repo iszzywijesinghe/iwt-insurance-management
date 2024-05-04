@@ -5,7 +5,7 @@
             <h5 class="footerbody">+94 77 333 4444/ +94 112 333 444</h5>
             <h5 class="footerbody">info@motoguard.insurance.lk</h5>
             <div class="footlogo">
-                <img src="../asserts/img/logo.png" alt="logo">
+                <img src="asserts/img/logo.png" alt="logo">
             </div>
         </div>
         <div class="containerf2">
