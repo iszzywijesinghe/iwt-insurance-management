@@ -68,9 +68,10 @@
                     </div>   
                 </div>
                 <div class="whitestroke">
-                    
                 </div>
-
+                <div class="test">
                 <?php include 'partials/footer-index.php' ?>
+                </div>
+                
     </body>
         </html>
