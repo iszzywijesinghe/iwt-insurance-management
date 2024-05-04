@@ -8,14 +8,13 @@
             <meta content="" name="description">
 
             <link href="./asserts/css/homestyles.css" rel="stylesheet">
+            <link href="./assert/css/style-nav-h.css" rel="stylesheet">
         </head>
         
         <body> 
     
              <!--navbar container-->
-             <div class="navbar_container"> 
-
-             </div>
+             <?php include 'partials/nav-bar-h.php' ?>
 
             <!--top container-->
             <div class="t_container">
