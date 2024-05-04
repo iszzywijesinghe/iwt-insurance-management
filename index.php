@@ -13,8 +13,9 @@
         
         <body> 
 
-            <?php include 'partials/nav-bar-h.php' ?>
+            <?php include 'partials/nav-bar-index.php' ?>
             <!--navbar container-->
+            
             
 
             <!--top container-->

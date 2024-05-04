@@ -1,6 +1,6 @@
 <nav>
     <div class="logo">
-    <img width= "75px" height= "75px" src="../asserts/img/logo.png" alt="Logo">
+    <img width= "75px" height= "75px" src="asserts/img/logo.png" alt="Logo">
     </div>
     <div>
     <ul>

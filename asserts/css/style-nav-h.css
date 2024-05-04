@@ -16,7 +16,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items:center;
-  height: 100px;
+  height: 70px;
 }
 
 nav ul {
@@ -37,6 +37,7 @@ nav ul li a {
 
 .user-circle {
   background-color: #fff;
+  margin-right: 40px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -45,4 +46,8 @@ nav ul li a {
   align-items: center;
   color: #333;
   font-weight: bold;
+}
+
+.logo{
+  margin-left: 40px;
 }
