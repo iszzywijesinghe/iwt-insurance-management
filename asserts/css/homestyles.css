@@ -163,7 +163,7 @@ footer{
 .footlogo{
     
     position: fixed;
-    top: 76%;
+    top: 72%;
     left: 22%;
     height: fit-content;
     width: fit-content;
@@ -171,8 +171,8 @@ footer{
 }
 
 .footlogo img{
-    height: 140px;
-    width: 140px;
+    height: 100px;
+    width: 100px;
 }
 
 h3.footerhead{
