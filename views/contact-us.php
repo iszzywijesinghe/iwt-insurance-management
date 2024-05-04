@@ -3,8 +3,10 @@
     <head>
         <title>Login</title>
         <link rel="stylesheet" type="text/css" href="../asserts/css/contact-us-styles.css">
+        <link rel="stylesheet" type="text/css" href="../asserts/css/style-nav-h.css">
     </head>
     <body>
+        <?php include '../partials/nav-bar-h.php' ?>
         <div class="container">
             <div class="label1">
                 <h2 class="sub-heading">Need A Support?</h2>
