@@ -11,6 +11,7 @@ body {
 }
 
 nav {
+  height: 80px;
   background-color: #0e1079;
   padding: 10px 20px;
   display: flex;
