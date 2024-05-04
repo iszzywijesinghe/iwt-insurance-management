@@ -70,6 +70,7 @@ button {
     border-radius: 10px;
     width: 40%;
     font-weight: bold;
+    cursor: pointer;
 }
 
 button:hover {
