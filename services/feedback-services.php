@@ -17,17 +17,15 @@ function viewFeedback()
     }
 }
 
-function addFeedback($fbId, $rate, $des, $nic)
+function addFeedback($rate, $des, $nic)
 {
     try {
         $insertQuery = "INSERT INTO feedback (
-        feedback_id,
         rate,
         description,
         accident_grade,
         cus_nic
-        ) VALUES ( 
-        '$fbId' , 
+        ) VALUES (  
         '$rate' , 
         '$des', 
         '$nic' 

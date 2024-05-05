@@ -36,14 +36,16 @@
     <?php
     include ("../services/feedback-service.php");
 
-    if (isset($_POST['v-submit'])) {
+    if (isset($_POST[''])) {
 
         $rate = $_POST['rating'];
         $des = $_POST['fb-note'];
         // $fbId = $_POST[''];
         // $nic = $_POST[''];
 
-        addFeedback($fbId, $rate, $des, $nic);
+        // addFeedback($fbId, $rate, $des, $nic);
+
+        echo $rate;
 
         // TODO: Debug this logic
         // if (
