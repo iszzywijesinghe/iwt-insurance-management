@@ -7,7 +7,7 @@ function viewVehicle()
         $viewQuery = "SELECT * FROM vehicle";
         $results = mysqli_query(getConnectionInstance(), $viewQuery);
         if (!$results) {
-            $message = "Error Fetching Data" . mysqli_error(Connection());
+            $message = "Error Fetching Data" . mysqli_error(getConnectionInstance());
             echo "<script type='text/javascript'>alert('$message');</script>";
         } else {
             return ($results);
@@ -17,7 +17,7 @@ function viewVehicle()
     }
 }
 
-function addVehicle($customerNic, $vehicleNo, $engineNo, $insuranceType, $vehicleBrand, $vehicleModle, $vehicleValue, $yom)
+function addVehicle($customerNic, $vehicleNo, $chassisNo, $engineNo, $insuranceType, $vehicleBrand, $vehicleModle, $vehicleValue, $yom)
 {
     try {
         $insertQuery = "INSERT INTO vehicle (
@@ -33,8 +33,9 @@ function addVehicle($customerNic, $vehicleNo, $engineNo, $insuranceType, $vehicl
 
         ) VALUES ( 
         '$customerNic' , 
-        '$vehicleNo' , 
-        '$engineNo', 
+        '$vehicleNo' ,
+        '$engineNo',
+        '$chassisNo' ,  
         '$insuranceType'
         '$vehicleBrand'
         '$vehicleModle'

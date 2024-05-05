@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+:root{
+    --max_width:1200px;
+}
+
+
+
+body{
+    /* margin:0;
+    padding:0; */
+    overflow-x: hidden;
+}
+
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+h2
+{
+    text-align: center;
+}
+.dashboard {
+	display: flex;
+	height: 100vh;
+}
+
+.main-content {
+	flex: 1;
+	padding: 20px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	border: 1px solid black;
+	padding: 8px;
+	text-align: center;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.word {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.word p {
+	margin-right: 10px;
+}
+
+.textbox {
+	flex: 1;
+	width: 50px;
+}
+
+.form-container {
+	
+	width: 700px;
+margin-left: 380px;
+	padding: 10px;
+	border-radius: 5px;
+	color: white;
+	
+	
+}
+
+.form-group {
+	margin-top: 20px;
+	display: flex;
+}
+
+.form-group-ins {
+	margin-top: 20px;
+	margin-bottom: 60px;
+	display: flex;
+}
+
+.form-group label,
+.form-group-ins label {
+	flex: 1;
+	margin-top: 5px;
+	margin-right: 60px;
+	margin-left: 50px;
+	font-weight: bold;
+}
+
+select {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	margin-right: 60px;
+	flex: 2;
+}
+
+.form-group input,
+.form-group-ins input,
+.form-group textarea {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	flex: 2;
+	margin-right: 60px;
+}
+
+.form-group textarea {
+	height: 100px;
+}
+
+button {
+	background-color: white;
+	border: none;
+	color: darkblue;
+	padding: 15px 20px;
+	border-radius: 10px;
+	width: 40%;
+	font-weight: bold;
+	cursor: pointer;
+	margin: 20px 30px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+button:hover {
+	background-color: blue;
+	color: white;
+}
+
+.img_payment_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.img_payment {
+	margin: 0 7px;
+	width: 8%;
+	border: 1px solid rgb(217, 216, 216);
+	border-radius: 8px;
+}
+
+.heading1{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+	line-height: 10px;
+}
+
+.image_hover{
+    width: 100vw;
+    height: 560px;
+    background-color: darkblue;
+}
+
+.car_image{
+    width: 100vw;
+    height: 560px;
+    opacity: 60%;
+
+}
+
+.middle{
+	background-color: darkblue;
+	margin-top: 0%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	height: fit-content;
+	width: 100vw;
+	
+}
+
+.des{
+	font-size: 40px;
+}
+
