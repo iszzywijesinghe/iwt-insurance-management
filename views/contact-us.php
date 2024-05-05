@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login</title>
+        <title>Contact Us</title>
         <link rel="stylesheet"  href="style.css">
         <link rel="stylesheet" type="text/css" href="../asserts/css/contact-us-styles.css">
         <link rel="stylesheet" type="text/css" href="../asserts/css/style-nav-h.css">
@@ -12,13 +12,16 @@
 
         <!--image container-->
         <?php include '../partials/nav-bar-h.php' ?>
-        <div class="image-container">
-            <div class="label1">
-                <h2 class="sub-heading">Need A Support?</h2>
-                <h1 class="heading">Then Contact Us.</h1>
-            </div>
-        </div>
 
+        <div class="image_hover">
+            <div class="img_container"> 
+                <img class="car_image" src = "../asserts/img/contact.png">
+            </div>
+            <div class="heading1">
+            <h2>Contact Us!</h2>
+            <h1 class="des">We Offer You 24Hrs Customer Care</h1>
+             </div>
+</div>
         <!--middle container-->
         <div class="middle-container">
             <div class="container">

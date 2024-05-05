@@ -10,12 +10,58 @@
         <link rel="stylesheet" type="text/css" href="../asserts/css/footer-styles.css">
     </head>
     <body>
+
+    <?php
+    include ("../services/register-service.php");
+
+    if (isset($_POST['Register'])) {
+
+        $customerNic = $_POST['cus_nic'];
+        $firstname = $_POST['first_name'];
+        $lastname = $_POST['last_name'];
+        $email= $_POST['email'];
+        $houseno = $_POST['house_no'];
+        $streetno = $_POST['street_no'];
+        $city= $_POST['city'];
+        $gender= $_POST['gender'];
+        $contactno= $_POST['contact_no'];
+
+        adduser($cusnic, $firstname,	$lastname,	$email,	$houseno, $streetno, $city, $gender, $contactno);
+
+        // TODO: Debug this logic
+        // if (
+        //     !empty($vehicleNo) ||
+        //     !empty($vehiclePhotos) ||
+        //     !empty($date) ||
+        //     !empty($grade)
+        // ) {
+        //     addClams($vehicleNo, $vehiclePhotos, $date, $grade);
+        // }
+    }
+
+    ?>
+
+
+
+
+
+
+
             <!--navbar container-->
             <?php include '../partials/nav-bar-h.php' ?>
 
             <!--image container-->
+            <div class="top_container">
+            <!--image container-->
+            <div class="image_hover">
             <div class="img_container"> 
                 <img class="car_image" src = "../asserts/img/register image.png">
+            </div>
+            <div class="heading1">
+            <h2>Register Today!</h2>
+            <h1>Be Sure Your Vehicle's Safe</h1>
+             </div>
+</div>
             </div>
 
             <!--center container-->
@@ -68,12 +114,20 @@
                         <br>
                         <div class="bottom-text">    
                     <p>By creating an account you agree to our <a class="terms" href="#">Terms & Privacy</a>.</p>
-                    
+                    </div>
                     <input type="checkbox" name="agree" class="checkbox">
                     <label for="agree" >I certify that the above information is true and that I agree to the terms & conditions mentiond in the insurance policy statement of the company.</label><br>
-                        <br></div>
-                        <button type="submit">Register</button>
+<<<<<<< HEAD
+                        
+                        <button name = "Register" type="submit">Register</button>
                     </form>
+=======
+                        <br>
+                        <br>
+                        <br>
+                        <button type="submit">Register</button>
+                    </form> 
+>>>>>>> 9a955b6a7953d3f494e5ee36c34ea196e1e2162d
                 </div>
             </div>
 
