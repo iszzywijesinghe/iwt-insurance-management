@@ -17,7 +17,7 @@ function viewVehicle()
     }
 }
 
-function addVehicle($customerNic, $vehicleNo, $engineNo, $insuranceType, $vehicleBrand, $vehicleModle, $vehicleValue, $yom)
+function addVehicle($customerNic, $vehicleNo, $chassisNo, $engineNo, $insuranceType, $vehicleBrand, $vehicleModle, $vehicleValue, $yom)
 {
     try {
         $insertQuery = "INSERT INTO vehicle (
@@ -33,8 +33,9 @@ function addVehicle($customerNic, $vehicleNo, $engineNo, $insuranceType, $vehicl
 
         ) VALUES ( 
         '$customerNic' , 
-        '$vehicleNo' , 
-        '$engineNo', 
+        '$vehicleNo' ,
+        '$engineNo',
+        '$chassisNo' ,  
         '$insuranceType'
         '$vehicleBrand'
         '$vehicleModle'
