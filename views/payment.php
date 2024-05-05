@@ -23,14 +23,6 @@
 
 		addPayment($claimId, $vehicleNo, $chName, $cNo, $cvv, $cardExpDate);
 
-		echo $claimId . "<br>";
-		echo $vehicleNo . "<br>";
-		echo $chName . "<br>";
-		echo $cNo . "<br>";
-		echo $cvv . "<br>";
-		echo $cardExpDate . "<br>";
-
-
 		// echo $rate;
 		// var_dump($_POST['fb_note']);
 
