@@ -1,10 +1,10 @@
 <?php
 include ("../utils/db-connection.php");
 
-function viewClams()
+function viewVehicle()
 {
     try {
-        $viewQuery = "SELECT * FROM claim";
+        $viewQuery = "SELECT * FROM vehicle";
         $results = mysqli_query(getConnectionInstance(), $viewQuery);
         if (!$results) {
             $message = "Error Fetching Data" . mysqli_error(Connection());
@@ -17,19 +17,29 @@ function viewClams()
     }
 }
 
-function addClams($vehicleNo, $vehiclePhotos, $date, $grade)
+function addVehicle($customerNic, $vehicleNo, $engineNo, $insuranceType, $vehicleBrand, $vehicleModle, $vehicleValue, $yom)
 {
     try {
-        $insertQuery = "INSERT INTO claim (
+        $insertQuery = "INSERT INTO vehicle (
+        cus_nic,
         vehicle_no,
-        vehicle_photos,
-        date,
-        accident_grade
+        engine_no,
+        chassis_no,
+        insurance_type,
+        vehicle_brand,
+        vehicle_modle,
+        vehicle_value,
+        yom
+
         ) VALUES ( 
+        '$customerNic' , 
         '$vehicleNo' , 
-        '$vehiclePhotos' , 
-        '$date', 
-        '$grade' 
+        '$engineNo', 
+        '$insuranceType'
+        '$vehicleBrand'
+        '$vehicleModle'
+        '$vehicleValue'
+        '$yom'
         )";
 
         $result = mysqli_query(getConnectionInstance(), $insertQuery);

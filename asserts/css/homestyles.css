@@ -7,29 +7,52 @@
 
 
 body{
-    margin:0;
-    padding:0;
+    /* margin:0;
+    padding:0; */
     overflow-x: hidden;
+}
+
+/*navbar_container*/
+.navbar_container{
+    
+    
+    width: 100vw;
+    height: 100px;
+}
+
+/*image container*/
+.img_container {
+    
+    width: 100vw;
+    height: 460px;
+    background-color: darkblue;
+}
+.car_image{
+    width: 100vw;
+    height: 460px;
+    opacity: 80%;
+
 }
 
 /*top*/
 .t_container{
-    
+    border: 2px solid black;
     width: 100vw;
-    height: 550px;
+    height: 460px;
     
 }
 .heading1 {
     position: absolute;
-    top: 30%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    color: white;
 }
 
 .buttons {
     position: absolute;
-    top: 43%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -44,7 +67,8 @@ button {
 }
 
 button:hover {
-    background-color: black;
+    background-color: white;
+    color: darkblue;
 }
 
 .heading1 h1 {
@@ -120,82 +144,10 @@ button:hover {
 }
 
 
-
-
-
-
-/*footer*/
-.f_container{
-    
-    width: 100vw;
-    height: fit-content;
-    
-}
-
-footer{
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-
-
-}
-.footlogo{
-    
+.test{
     position: fixed;
-    top: 76%;
-    left: 22%;
+    border: 2px solid black;
     height: fit-content;
-    width: fit-content;
-    transform: translateY(5px);  
 }
 
-.footlogo img{
-    height: 140px;
-    width: 140px;
-}
-
-h3.footerhead{
-    margin-top: 1px;
-    margin-bottom: 1px;
-}
-
-h5.footerbody{
-    margin-top: 1px;
-    margin-bottom: 1px;
-}
-
-.containerf{
-    
-    
-    height: fit-content;
-    padding: 30px;
-    padding-left: 500px;
-    margin-bottom:0;
-    color: white;
-    background-color: darkblue;
-    
-    
-    
-}
-
-.containerf2{
-
-    height: 30px;
-    color: darkblue;
-    background-color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    transform: translateZ(20px);
-    margin-bottom: 0;
-    
-}
-
-.myfooter{
-    margin-bottom: 0;
-}
 

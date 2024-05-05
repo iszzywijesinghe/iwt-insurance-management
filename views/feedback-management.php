@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include ("../services/clam-management-service.php"); ?>
+<?php include ("../services/feedback-service.php"); ?>
 
 <head>
     <title>Bootstrap Example</title>
@@ -34,16 +34,18 @@
 
 
     <?php
-    include ("../partials/user-dashboard-navbar-sm.php");
+    include ("../services/feedback-service.php");
 
-    if (isset($_POST['v-submit'])) {
+    if (isset($_POST[''])) {
 
-        $vehicleNo = $_POST['v-no'];
-        $vehiclePhotos = $_POST['v-photos'];
-        $date = $_POST['v-date'];
-        $grade = $_POST['v-grade'];
+        $rate = $_POST['rating'];
+        $des = $_POST['fb-note'];
+        // $fbId = $_POST[''];
+        // $nic = $_POST[''];
 
-        addClams($vehicleNo, $vehiclePhotos, $date, $grade);
+        // addFeedback($fbId, $rate, $des, $nic);
+
+        echo $rate;
 
         // TODO: Debug this logic
         // if (

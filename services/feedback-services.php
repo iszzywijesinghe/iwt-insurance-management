@@ -1,13 +1,13 @@
 <?php
 include ("../utils/db-connection.php");
 
-function viewClams()
+function viewFeedback()
 {
     try {
-        $viewQuery = "SELECT * FROM claim";
+        $viewQuery = "SELECT * FROM feedback";
         $results = mysqli_query(getConnectionInstance(), $viewQuery);
         if (!$results) {
-            $message = "Error Fetching Data" . mysqli_error(Connection());
+            $message = "Error Fetching Data" . mysqli_error(getConnectionInstance());
             echo "<script type='text/javascript'>alert('$message');</script>";
         } else {
             return ($results);
@@ -17,19 +17,18 @@ function viewClams()
     }
 }
 
-function addClams($vehicleNo, $vehiclePhotos, $date, $grade)
+function addFeedback($rate, $des, $nic)
 {
     try {
-        $insertQuery = "INSERT INTO claim (
-        vehicle_no,
-        vehicle_photos,
-        date,
-        accident_grade
-        ) VALUES ( 
-        '$vehicleNo' , 
-        '$vehiclePhotos' , 
-        '$date', 
-        '$grade' 
+        $insertQuery = "INSERT INTO feedback (
+        rate,
+        description,
+        accident_grade,
+        cus_nic
+        ) VALUES (  
+        '$rate' , 
+        '$des', 
+        '$nic' 
         )";
 
         $result = mysqli_query(getConnectionInstance(), $insertQuery);
