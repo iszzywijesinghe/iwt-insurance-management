@@ -12,6 +12,7 @@
 
 <?php
     include ("../services/insurance-types-service.php");
+    
 
     if (isset($_POST['v-submit'])) {
 
