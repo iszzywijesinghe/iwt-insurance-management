@@ -26,49 +26,38 @@
                             
                         <div class="form_only">
                         <div class="form-group">
-                            <label class="lable_name"  for="FullName">Full Name(In block capitals): </label>
-                            <input  type="text" id="FullName" name="FullName" required>
+                            <label class="lable_name"  for="CustomerNic">Customer NIC : </label><br><br>
+                            <input  type="text" id="CustomerNic" name="CustomerNic" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name"  for="owner'sNICno">Owner's NIC No.: </label>
-                            <input type="text" id="owner'sNICno" name="owner'sNICno" required>
+                            <label class="lable_name"  for="FirstName">First Name : </label><br><br>
+                            <input type="text" id="FirstName" name="FirstName" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name" for="vehicleNo">Vehicle No.: </label>
-                            <input type="text" id="vehicleNo" name="vehicleNo" required>
+                            <label class="lable_name" for="LastName">Last Name : </label><br><br>
+                            <input type="text" id="LastName" name="LastName" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name" for="Engineno">Engine No.: </label>
-                            <input type="text" id="Engineno" name="Engineno" required>
+                            <label class="lable_name" for="email">Email : </label><br><br>
+                            <input type="text" id="email" name="email" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name" for="chassisno">Chassis No.: </label>
-                            <input type="text" id="chassisno" name="chassisno" required>
+                            <label class="lable_name" for="Houseno">House no : </label><br>
+                            <input type="text" id="Houseno" name="Houseno" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name"  for="vehicletype">Vehicle Type: </label>
-                            <input type="text" id="vehicletype" name="vehicletype" required>
+                            <label class="lable_name"  for="streetno">Street no : </label><br>
+                            <input type="text" id="streetno" name="streetno" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name"  for="vehiclemodel">Vehicle Model: </label>
-                            <input type="text" id="vehiclemodel" name="vehiclemodel" required>
+                            <label class="lable_name"  for="city"> City : </label><br>
+                            <input type="text" id="city" name="city" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name"  for="YOM">Year of Manufactured(YOM): </label>
-                            <input type="text" id="YOM" name="YOM" required>
+                            <label class="lable_name"  for="Gender">Gender : </label><br>
+                            <input type="text" id="Gender" name="Gender" required>
                         </div><br>
-                        <div class="form-group">
-                            <label class="lable_name"  for="vehiclenumber">Vehicle Number: </label>
-                            <input type="text" id="vehiclenumber" name="vehiclenumber" required>
-                        </div><br>
-                        <div class="form-group">
-                            <label class="lable_name"  for="vehiclevalue">Vehicle Value: </label>
-                            <input type="text" id="vehiclevalue" name="vehiclevalue" required>
-                        </div><br>
-                        <div class="form-group">
-                            <label class="lable_name"  for="insurancetype">Insurance Type(Third Party/Full): </label>
-                            <input type="text" id="insurancetype" name="insurancetype" required>
-                        </div>
+                       
                     </div>
                         <br>
                         
