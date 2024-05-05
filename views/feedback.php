@@ -7,6 +7,34 @@
 
 </head>
 
+<?php
+include("../services/feedback-services.php");
+
+if (isset($_POST['fb-submit'])) {
+
+    $rate = $_POST['rating'];
+    $des = $_POST['fb_note'];
+    // $nic = $_POST[''];
+
+    // addFeedback($rate, $des, $nic);
+
+    echo $rate;
+    var_dump($_POST['fb_note']);
+
+    // TODO: Debug this logic
+    // if (
+    //     !empty($vehicleNo) ||
+    //     !empty($vehiclePhotos) ||
+    //     !empty($date) ||
+    //     !empty($grade)
+    // ) {
+    //     addClams($vehicleNo, $vehiclePhotos, $date, $grade);
+    // }
+}
+
+
+?>
+
 <body>
     <div class="heading1">
         <h2>Customer Feedback</h2>
@@ -19,7 +47,7 @@
             <h4 class="heading2">Rate Us.</h4>
         </div>
         <div class="formSection">
-            <form action="" method="post">
+            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
                 <div class="stars" onclick="selectStars(1)"></div>
                 <div class="stars" onclick="selectStars(2)"></div>
                 <div class="stars" onclick="selectStars(3)"></div>
@@ -29,7 +57,7 @@
                 <div class="fbText">
                     <textarea name="fb_note" id="fb_note" rows="6" cols="50"></textarea>
                 </div>
-                <button type="submit" name>Submit</button>
+                <button type="submit" name="fb-submit">Submit</button>
             </form>
         </div>
     </div>
