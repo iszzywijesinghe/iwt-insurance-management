@@ -5,16 +5,30 @@
 	<meta charset="UTF-8">
 	<meta name=" viewport" content="width=device-width, initial-scale=1.0">
 	<title> Insurance Types Management Page </title>
+
 	<link rel="stylesheet" href="../asserts/css/types-management.css">
+	<link rel="stylesheet" type="text/css" href="../asserts/css/style-nav-h.css">
+    <link rel="stylesheet" type="text/css" href="../asserts/css/footer-styles.css">
 </head>
 
 <body>
-		<div class="Insurance Types Management Page">
-			<h2>Insurance Types Management</h2>
-		</div>
-        
+	        <!--image container-->
+			<?php include '../partials/nav-bar-h.php' ?>
+
+<div class="image_hover">
+	<div class="img_container"> 
+		<img class="car_image" src = "../asserts/img/typeimg.png">
+	</div>
+	<div class="heading1">
+	<h2>Insurance Types</h2>
+	<h1 class="des">Select Your Guard</h1>
+	 </div>
+</div>
+
+<div class="middle">
 		<div class="form-container">
 			<form action="#" method="post">
+			<h2>Insurance Types Management</h2>
 
 				<div class="form-group-ins">
 					<label for="name">Customer NIC:</label>
@@ -51,6 +65,12 @@
 			
 			</form>
 		</div>
+		</div>
+
+		        <!--footer container-->
+				<div class="footer-container">
+            <?php include '../partials/footer-index.php' ?>
+        </div>
 	
 </body>
 
