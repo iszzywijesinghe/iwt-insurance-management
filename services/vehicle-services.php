@@ -17,10 +17,42 @@ function viewVehicle()
     }
 }
 
-function addVehicle()
+function addVehicle($customerNic, $vehicleNo, $engineNo, $insuranceType, $vehicleBrand, $vehicleModle, $vehicleValue, $yom)
 {
     try {
-        $insertQuery = "";
+        $insertQuery = "INSERT INTO vehicle (
+        cus_nic,
+        vehicle_no,
+        engine_no,
+        chassis_no,
+        insurance_type,
+        vehicle_brand,
+        vehicle_modle,
+        vehicle_value,
+        yom
+
+        ) VALUES ( 
+        '$customerNic' , 
+        '$vehicleNo' , 
+        '$engineNo', 
+        '$insuranceType'
+        '$vehicleBrand'
+        '$vehicleModle'
+        '$vehicleValue'
+        '$yom'
+        )";
+
+        $result = mysqli_query(getConnectionInstance(), $insertQuery);
+
+        if (!$result) {
+
+            $message = "Error Inserting Data" . mysqli_error(getConnectionInstance());
+            echo "<script type='text/javascript'>alert('$message');</script>";
+
+        } else {
+            echo "<script type='text/javascript'>alert('Data Inserted Sucessfully');</script>";
+        }
+
     } catch (Exception $e) {
         echo $e->getMessage();
     }
