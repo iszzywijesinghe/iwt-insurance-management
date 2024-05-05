@@ -81,8 +81,6 @@ body {
 
 .bottom-text{
     text-align: center;
-<<<<<<< HEAD
-<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,9 +102,7 @@ body {
 }
 .myfooter{
     margin-bottom: 0;
-=======
->>>>>>> 96fd541e578de52b3dad48389a1d03c2f6e312c2
-=======
+
 }
 
 .image_hover{
@@ -130,5 +126,4 @@ body {
     color: white;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
->>>>>>> 9aeccb8646b882164c07a9d6cdb9a6bc2c6b4b3f
 }
