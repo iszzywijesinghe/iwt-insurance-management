@@ -41,10 +41,10 @@ h5.footerbody{
 
 .containerf{
     
- 
+    
     height: fit-content;
     padding: 30px;
-    padding-left: 500px;
+    /* padding-left: 500px; */
     margin-bottom:0;
     color: white;
     background-color: darkblue;
