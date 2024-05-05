@@ -79,7 +79,7 @@
                         <br>
                         <br>
                         <button type="submit">Register</button>
-                    </form>
+                    </form> 
                 </div>
             </div>
 

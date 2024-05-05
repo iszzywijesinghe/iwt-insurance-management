@@ -144,11 +144,12 @@ h5.footerbody{
 .button
 {
     transition-duration: 0.4s;
+    font-size: 12px;;
 }
 .button:hover
 {
-    background-color:white;
-    color:skyblue;
+    background-color:cyan;
+    color:white;
 }
 .myfooter{
     margin-bottom: 0;
