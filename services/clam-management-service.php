@@ -47,4 +47,20 @@ function addClams($vehicleNo, $vehiclePhotos, $date, $grade)
         echo $e->getMessage();
     }
 }
+
+function getUpdateRow($id)
+{
+    try {
+        $viewQuery = "SELECT * FROM claim WHERE claim_id = '$id'";
+        $results = mysqli_query(getConnectionInstance(), $viewQuery);
+        if (!$results) {
+            $message = "Error Fetching Data" . mysqli_error(getConnectionInstance());
+            echo "<script type='text/javascript'>alert('$message');</script>";
+        } else {
+            return ($results);
+        }
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+}
 ?>

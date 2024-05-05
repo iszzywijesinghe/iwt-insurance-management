@@ -30,7 +30,6 @@ function addVehicle($customerNic, $vehicleNo, $engineNo, $insuranceType, $vehicl
         vehicle_modle,
         vehicle_value,
         yom
-
         ) VALUES ( 
         '$customerNic' , 
         '$vehicleNo' , 

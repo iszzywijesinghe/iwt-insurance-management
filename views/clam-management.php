@@ -76,6 +76,7 @@
                             <th>Vehicle Photos</th>
                             <th>Date</th>
                             <th>Accident Grade</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -88,12 +89,20 @@
                                 echo "<td>" . $clam[2] . "</td>";
                                 echo "<td>" . $clam[3] . "</td>";
                                 echo "<td>" . $clam[4] . "</td>";
+                                echo "<td>";
+                                echo "<div>";
+                                // echo " <form method='post' enctype='multipart/form-data'>";
+                                echo " <button data-toggle='modal' data-target='#updateModal '" . $clam[0] . "'' class='btn btn-primary'>Edit</button>";
+                                // echo " </form>";
+                                echo "</div>";
+                                echo "</td>";
                                 echo "</tr>";
                             }
                         } ?>
                     </tbody>
                 </table>
 
+                <!-- Insert Modal -->
                 <div class="modal fade" id="myModal" role="dialog">
                     <div class="modal-dialog">
                         <!-- Modal content-->
@@ -136,9 +145,59 @@
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             </div>
                         </div>
-
                     </div>
                 </div>
+                <!-- End of Insert Modal -->
+
+                <!-- Update Modal -->
+                <div class="modal fade" id="updateModal" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Update Clams</h4>
+                            </div>
+                            <div class="modal-body">
+                                <?php 
+                                var_dump(getUpdateRow($clam[0])->fetch_array(MYSQLI_ASSOC));
+                                ?>
+                                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post"
+                                    enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label>Vehicle No</label>
+                                        <input type="text" class="form-control" id="v-no" placeholder="Enter Vehicle no"
+                                            name="v-no" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- TODO: Should be a file uploader -->
+                                        <label>Vehicle Photos</label>
+                                        <input type="text" class="form-control" id="v-photos"
+                                            placeholder="Enter Vehicle Photos" name="v-photos" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Date</label>
+                                        <input type="date" class="form-control" id="v-date" placeholder="Enter Date"
+                                            name="v-date" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Grade</label>
+                                        <select class="form-select form-select-lg" name="v-grade" required>
+                                            <option>A</option>
+                                            <option>B</option>
+                                            <option>C</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" name="v-submit" class="btn btn-default">Add</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Update Modal -->
             </div>
         </div>
     </div>
