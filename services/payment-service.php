@@ -17,22 +17,27 @@ function viewPayment()
     }
 }
 
-function addPayment($type, $insExpDate, $cName, $cNo, $cvv, $cardExpDate)
+function addPayment($claimId, $vehicleNo, $chName, $cNo, $cvv, $cardExpDate)
 {
     try {
         $insertQuery = "INSERT INTO payment (
-        rate,
-        description,
-        accident_grade,
-        cus_nic
+        claim_id,
+        vehicle_no, 
+        cardholders_name,
+        card_no,
+        cvv,
+        expire_date
         ) VALUES (  
-        '$type',
-        '$insExpDate', 
-        '$cName', 
+        '$claimId',
+        '$vehicleNo', 
+        '$chName', 
         '$cNo', 
         '$cvv', 
         '$cardExpDate' 
         )";
+        //TODO: payment_id, cus_nic, amount not included above
+        //TODO: change the cardholder's_name to cardholders_name in the db
+        //TODO: Change data type to varchar of expire_date in db
 
         $result = mysqli_query(getConnectionInstance(), $insertQuery);
 
