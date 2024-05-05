@@ -15,13 +15,14 @@
     <div class="imghcontainer">
         <p class="imgtext">
             We serve you the best Motor Insuarnce Solution
+            
         </p>
     </div>
 
     <div class="container">
         <section class="about">
             <div class="about-image">
-                <img src="images/">
+                <img src="">
             </div>
             <div class="about-content">
                 <h2>Our story</h2>
@@ -45,20 +46,50 @@
     </div>
     <div class="teamcontainer">
         <div style="display: flex; flex-direction: row; gap: 30px; align-items: center;">
-            <div style="background-color: red; width: 200px; height: 200px;">
-        <img src="../asserts/img/admin.jpg " alt="" width="200px" height="200px">
-        <h4 style="text-align: center;"> ceo</h4>
+            <div style="background-color:white; width: 200px; height: 200px;">
+        <img src="../asserts/img/CEO.jpg " alt="" width="200px" height="175px">
+        <h4 style="text-align: center;">CEO/Founder</h4>
         </div>
-            <div style="background-color: red; width: 200px; height: 200px;">Item Two</div>
-            <div style="background-color: red; width: 200px; height: 200px;">Item Three</div>
-            <div style="background-color: red; width: 200px; height: 200px;">Item Four</div>
+            <div style="background-color:white; width: 200px; height: 200px;">
+            <img src="../asserts/img/ceo_Co_Founder.jpg" alt="" width="200px" height="175px">
+            <h4 style="text-align: center;">CEO/Co Founder</h4>
+        </div>
+            <div style="background-color:white; width: 200px; height: 200px;">
+            <img src="../asserts/img/director1.jpg" alt="" width="200px" height="175px">
+            <h4 style="text-align: center;">Director Board Member</h4>
+        
+        </div>
+            <div style="background-color:white; width: 200px; height: 200px;">
+            <img src="../asserts/img/director2.avif" alt="" width="200px" height="175px">
+            <h4 style="text-align: center;">Director Board Member</h4>
+        
+        </div>
         </div>
         <div style="display: flex; flex-direction: row; gap: 30px; align-items: center; margin-top: 10px;">
-            <div style="background-color: red; width: 200px; height: 200px;">Item One</div>
-            <div style="background-color: red; width: 200px; height: 200px;">Item Two</div>
-            <div style="background-color: red; width: 200px; height: 200px;">Item Three</div>
-            <div style="background-color: red; width: 200px; height: 200px;">Item Four</div>
-            <div style="background-color: red; width: 200px; height: 200px;">Item Fove</div>
+            <div style="background-color: white; width: 200px; height: 200px;">
+            <img src="../asserts/img/gm1.jpg" alt="" width="200px" height="175px">
+            <h4 style="text-align: center;">General Manager</h4>
+        
+        </div>
+            <div style="background-color: white; width: 200px; height: 200px;">
+            <img src="../asserts/img/gm2.jpg" alt="" width="200px" height="175px">
+            <h4 style="text-align: center;">General Manager</h4>
+        </div>
+            <div style="background-color: white; width: 200px; height: 200px;">
+            <img src="../asserts/img/bm_nug.jpg" alt="" width="200px" height="175px">
+            <h4 style="text-align: center;">Branch Manager
+        (Nugegoda)</h4>
+        </div>
+            <div style="background-color: white; width: 200px; height: 200px;">
+            <img src="../asserts/img/bm_ke.avif" alt="" width="200px" height="175px">
+            <h4 style="text-align: center;">Branch Manager
+        (Kegalle)
+        </div>
+            <div style="background-color: white; width: 200px; height: 200px;">
+            <img src="../asserts/img/bm_galle.jpg" alt="" width="200px" height="175px">
+            <h4 style="text-align: center;">Branch Manager
+            (Galle)</h4>
+        </div>
         </div>
     </div>
 

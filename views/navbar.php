@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="../asserts/css/styles-nav.css">
+        <link rel="stylesheet" href="../asserts/css/style_nav.css">
     </head>
     <body>
         <nav>
