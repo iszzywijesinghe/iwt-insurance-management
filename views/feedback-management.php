@@ -34,7 +34,7 @@
 
 
     <?php
-    include ("../partials/user-dashboard-navbar-sm.php");
+    include ("../services/feedback-service.php");
 
     if (isset($_POST['v-submit'])) {
 
