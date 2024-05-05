@@ -3,30 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Register</title>
-        
+        <title>Register New Vehicle</title>
         <link rel="stylesheet" href="../asserts/css/Regstylesheet.css">
         <link rel="stylesheet" type="text/css" href="../asserts/css/style-nav-h.css">
         <link rel="stylesheet" type="text/css" href="../asserts/css/footer-styles.css">
     </head>
     <body>
 
+
     <?php
-    include ("../services/register-service.php");
+    include ("../services/vehicle-services.php");
 
     if (isset($_POST['Register'])) {
 
         $customerNic = $_POST['cus_nic'];
-        $firstname = $_POST['first_name'];
-        $lastname = $_POST['last_name'];
-        $email= $_POST['email'];
-        $houseno = $_POST['house_no'];
-        $streetno = $_POST['street_no'];
-        $city= $_POST['city'];
-        $gender= $_POST['gender'];
-        $contactno= $_POST['contact_no'];
+        $vehicleNo = $_POST['vehicle_no'];
+        $engineNo = $_POST['engine_no'];
+        $chassisNo = $_POST['chassis_no'];
+        $insuranceType = $_POST['insurance_type'];
+        $vehicleBrand = $_POST['vehicle_brand'];
+        $vehicleModle = $_POST['vehicle_modle'];
+        $vehicleValue = $_POST['vehicle_value'];
+        $yom = $_POST['yom'];
 
-        adduser($cusnic, $firstname,	$lastname,	$email,	$houseno, $streetno, $city, $gender, $contactno);
+
+        addVehicle($customerNic, $vehicleNo, $chassisNo, $engineNo, $insuranceType, $vehicleBrand, $vehicleModle, $vehicleValue, $yom);
 
         // TODO: Debug this logic
         // if (
@@ -40,18 +41,10 @@
     }
 
     ?>
+            
+    <?php include '../partials/nav-bar-h.php' ?>
 
-
-
-
-
-
-
-            <!--navbar container-->
-            <?php include '../partials/nav-bar-h.php' ?>
-
-            <!--image container-->
-            <div class="top_container">
+<div class="top_container">
             <!--image container-->
             <div class="image_hover">
             <div class="img_container"> 
@@ -62,10 +55,10 @@
             <h1>Be Sure Your Vehicle's Safe</h1>
              </div>
 </div>
-            </div>
+</div>
 
             <!--center container-->
-            <div class="center_container1">
+            <div class="center_container">
                 <div class="form_container">
                     <form id="registerForm">
                         <h1>Register Now!!!</h1>
@@ -75,41 +68,46 @@
                             
                         <div class="form_only">
                         <div class="form-group">
-                        <div class="head">
-                                <span> Customer Details </span><br><br>
+                            <div class="head">
+                                <span> Vehicle Details </span><br><br>
                             </div>
-                            <label class="lable_name"  for="CustomerNic">Customer NIC : </label><br>
-                            <input  type="text" id="CustomerNic" name="CustomerNic" required>
+                            <label class="lable_name"  for="cus_nic">National Identy Card Number (NIC): </label><br>
+                            <input  type="text" id="FullName" name="cus_nic" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name"  for="FirstName">First Name : </label><br>
-                            <input type="text" id="FirstName" name="FirstName" required>
+                            <label class="lable_name"  for="vehicle_no">Vehicle No. : </label><br>
+                            <div class="whitebox">
+                            <input type="text" id="owner'sNICno" name="vehicle_no" required>
+                            </div>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name" for="LastName">Last Name : </label><br>
-                            <input type="text" id="LastName" name="LastName" required>
+                            <label class="lable_name" for="engine_no">Engine No.: </label><br>
+                            <input type="text" id="Engineno" name="engine_no" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name" for="email">Email : </label><br>
-                            <input type="text" id="email" name="email" required>
+                            <label class="lable_name" for="chassis_no">Chassis No.: </label><br>
+                            <input type="text" id="chassisno" name="chassis_no" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name" for="Houseno">House no : </label><br>
-                            <input type="text" id="Houseno" name="Houseno" required>
+                            <label class="lable_name"  for="insurance_type">Insurance Type: </label><br>
+                            <input type="text" id="vehicletype" name="insurance_type" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name"  for="streetno">Street no : </label><br>
-                            <input type="text" id="streetno" name="streetno" required>
+                            <label class="lable_name"  for="vehicle_brand">Vehicle Brand: </label><br>
+                            <input type="text" id="vehiclemodel" name="vehicle_brand" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name"  for="city"> City : </label><br>
-                            <input type="text" id="city" name="city" required>
+                            <label class="lable_name"  for="vehicle_modle">Vehicle Model: </label><br>
+                            <input type="text" id="YOM" name="vehicle_modle" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name"  for="Gender">Gender : </label><br>
-                            <input type="text" id="Gender" name="Gender" required>
+                            <label class="lable_name"  for="vehicle_value">Vehicle Value: </label><br>
+                            <input type="text" id="vehiclevalue" name="vehicle_value" required>
                         </div><br>
-                       
+                        <div class="form-group">
+                            <label class="lable_name"  for="yom">Year of Manufactured(YOM): </label><br>
+                            <input type="text" id="insurancetype" name="yom" required>
+                        </div>
                     </div>
                         <br>
                         <div class="bottom-text">    
@@ -117,23 +115,15 @@
                     </div>
                     <input type="checkbox" name="agree" class="checkbox">
                     <label for="agree" >I certify that the above information is true and that I agree to the terms & conditions mentiond in the insurance policy statement of the company.</label><br>
-<<<<<<< HEAD
-                        
-                        <button name = "Register" type="submit">Register</button>
+                        <br>
+                        <button name="Register" type="submit">Register</button>
                     </form>
-=======
-                        <br>
-                        <br>
-                        <br>
-                        <button type="submit">Register</button>
-                    </form> 
->>>>>>> 9a955b6a7953d3f494e5ee36c34ea196e1e2162d
+
+                    
                 </div>
             </div>
-
-           
-   <!--footer container-->
-   <?php include '../partials/footer-index.php' ?>
+            <?php include '../partials/footer-index.php' ?>
+          
             
 
 

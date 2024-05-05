@@ -1,10 +1,10 @@
 <?php
 include ("../utils/db-connection.php");
 
-function viewVehicle()
+function viewPayment()
 {
     try {
-        $viewQuery = "SELECT * FROM vehicle";
+        $viewQuery = "SELECT * FROM payment";
         $results = mysqli_query(getConnectionInstance(), $viewQuery);
         if (!$results) {
             $message = "Error Fetching Data" . mysqli_error(getConnectionInstance());
@@ -17,30 +17,21 @@ function viewVehicle()
     }
 }
 
-function addVehicle($customerNic, $vehicleNo, $chassisNo, $engineNo, $insuranceType, $vehicleBrand, $vehicleModle, $vehicleValue, $yom)
+function addPayment($type, $insExpDate, $cName, $cNo, $cvv, $cardExpDate)
 {
     try {
-        $insertQuery = "INSERT INTO vehicle (
-        cus_nic,
-        vehicle_no,
-        engine_no,
-        chassis_no,
-        insurance_type,
-        vehicle_brand,
-        vehicle_modle,
-        vehicle_value,
-        yom
-
-        ) VALUES ( 
-        '$customerNic' , 
-        '$vehicleNo' ,
-        '$engineNo',
-        '$chassisNo' ,  
-        '$insuranceType'
-        '$vehicleBrand'
-        '$vehicleModle'
-        '$vehicleValue'
-        '$yom'
+        $insertQuery = "INSERT INTO payment (
+        rate,
+        description,
+        accident_grade,
+        cus_nic
+        ) VALUES (  
+        '$type',
+        '$insExpDate', 
+        '$cName', 
+        '$cNo', 
+        '$cvv', 
+        '$cardExpDate' 
         )";
 
         $result = mysqli_query(getConnectionInstance(), $insertQuery);

@@ -24,51 +24,55 @@ body{
 .img_container {
     
     width: 100vw;
-    height: 460px;
+    height: 560px;
     background-color: darkblue;
 }
 .car_image{
+    
     width: 100vw;
-    height: 460px;
-    opacity: 80%;
+    height: 560px;
+    opacity: 60%;
 
 }
 
 /*top*/
 .t_container{
-    border: 2px solid black;
+    
+    
     width: 100vw;
-    height: 460px;
+    height: 560px;
     
 }
 .heading1 {
     position: absolute;
-    top: 45%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .buttons {
     position: absolute;
-    top: 55%;
+    top: 64%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 button {
-    background-color: darkblue;
+    background-color: white;
     border: none;
-    color: white;
+    color: darkblue;
     padding: 15px 20px;
     border-radius: 10px;
     width: 120px;
 }
 
 button:hover {
-    background-color: white;
-    color: darkblue;
+    background-color: darkblue;
+    color: white;
 }
 
 .heading1 h1 {
@@ -88,7 +92,7 @@ button:hover {
 
 /*bottom*/
 .b_container{
-    
+    padding-top: 50px;
     display: flex;
     align-items: center;
     
