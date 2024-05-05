@@ -16,10 +16,10 @@ if (isset($_POST['fb-submit'])) {
     $des = $_POST['fb_note'];
     // $nic = $_POST['']; TODO: get the element 
 
-    // addFeedback($rate, $des, $nic);
+    addFeedback($rate, $des);
 
-    echo $rate;
-    var_dump($_POST['fb_note']);
+    // echo $rate;
+    // var_dump($_POST['fb_note']);
 
     // TODO: Debug this logic
     // if (
