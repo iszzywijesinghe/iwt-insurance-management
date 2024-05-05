@@ -3,7 +3,7 @@
 
 <head>
     <title>Feedback</title>
-    <link rel="stylesheet" href="../asserts/css/feedbackstyles.css">
+    <link rel="stylesheet" href="../asserts/css/feedback-styles.css">
 
 </head>
 
