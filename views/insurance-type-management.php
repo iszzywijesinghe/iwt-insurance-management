@@ -12,6 +12,38 @@
 </head>
 
 <body>
+
+<?php
+    include ("../services/insurance-types-service.php");
+    
+
+    if (isset($_POST['v-submit'])) {
+
+        $cus_nic = $_POST['cus_nic'];
+        $insurance_type = $_POST['insurance_type'];
+        $price = $_POST['price'];
+        $vehicle_no = $_POST['vehicle_no'];
+        $description = $_POST['description'];
+
+        addinsuranceTypes($cus_nic, $vehicle_no, $insurance_type, $price, $description);
+
+        // TODO: Debug this logic
+        // if (
+        //     !empty($vehicleNo) ||
+        //     !empty($vehiclePhotos) ||
+        //     !empty($date) ||
+        //     !empty($grade)
+        // ) {
+        //     addClams($vehicleNo, $vehiclePhotos, $date, $grade);
+        // }
+        }
+
+    ?>
+
+		<div class="Insurance Types Management Page">
+			<h2>Insurance Types Management</h2>
+		</div>
+
 	        <!--image container-->
 			<?php include '../partials/nav-bar-h.php' ?>
 
