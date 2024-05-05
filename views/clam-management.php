@@ -33,7 +33,31 @@
 <body>
 
 
-    <?php include ("../partials/user-dashboard-navbar-sm.php"); ?>
+    <?php
+    include ("../partials/user-dashboard-navbar-sm.php");
+
+    if (isset($_POST['v-submit'])) {
+
+        $vehicleNo = $_POST['v-no'];
+        $vehiclePhotos = $_POST['v-photos'];
+        $date = $_POST['v-date'];
+        $grade = $_POST['v-grade'];
+
+        addClams($vehicleNo, $vehiclePhotos, $date, $grade);
+
+        // TODO: Debug this logic
+        // if (
+        //     !empty($vehicleNo) ||
+        //     !empty($vehiclePhotos) ||
+        //     !empty($date) ||
+        //     !empty($grade)
+        // ) {
+        //     addClams($vehicleNo, $vehiclePhotos, $date, $grade);
+        // }
+    }
+
+
+    ?>
 
     <div class="container-fluid">
         <div class="row content">
@@ -79,32 +103,33 @@
                                 <h4 class="modal-title">Add Clams</h4>
                             </div>
                             <div class="modal-body">
-                                <form action="/action_page.php">
+                                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post"
+                                    enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label>Vehicle No</label>
                                         <input type="text" class="form-control" id="v-no" placeholder="Enter Vehicle no"
-                                            name="v-no">
+                                            name="v-no" required>
                                     </div>
                                     <div class="form-group">
                                         <!-- TODO: Should be a file uploader -->
                                         <label>Vehicle Photos</label>
                                         <input type="text" class="form-control" id="v-photos"
-                                            placeholder="Enter Vehicle Photos" name="v-photos">
+                                            placeholder="Enter Vehicle Photos" name="v-photos" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Date</label>
-                                        <input type="date" class="form-control" id="vNo" placeholder="Enter Date"
-                                            name="v-date">
+                                        <input type="date" class="form-control" id="v-date" placeholder="Enter Date"
+                                            name="v-date" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Grade</label>
-                                        <select class="form-select form-select-lg">
+                                        <select class="form-select form-select-lg" name="v-grade" required>
                                             <option>A</option>
                                             <option>B</option>
                                             <option>C</option>
                                         </select>
                                     </div>
-                                    <button type="submit" class="btn btn-default">Add</button>
+                                    <button type="submit" name="v-submit" class="btn btn-default">Add</button>
                                 </form>
                             </div>
                             <div class="modal-footer">

@@ -17,10 +17,32 @@ function viewClams()
     }
 }
 
-function addClams()
+function addClams($vehicleNo, $vehiclePhotos, $date, $grade)
 {
     try {
-        $insertQuery = "";
+        $insertQuery = "INSERT INTO claim (
+        vehicle_no,
+        vehicle_photos,
+        date,
+        accident_grade
+        ) VALUES ( 
+        '$vehicleNo' , 
+        '$vehiclePhotos' , 
+        '$date', 
+        '$grade' 
+        )";
+
+        $result = mysqli_query(getConnectionInstance(), $insertQuery);
+
+        if (!$result) {
+
+            $message = "Error Inserting Data" . mysqli_error(getConnectionInstance());
+            echo "<script type='text/javascript'>alert('$message');</script>";
+
+        } else {
+            echo "<script type='text/javascript'>alert('Data Inserted Sucessfully');</script>";
+        }
+
     } catch (Exception $e) {
         echo $e->getMessage();
     }
