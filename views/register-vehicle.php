@@ -14,7 +14,7 @@
     <?php
     include ("../services/vehicle-services.php");
 
-    if (isset($_POST['v-submit'])) {
+    if (isset($_POST['Register'])) {
 
         $customerNic = $_POST['cus_nic'];
         $vehicleNo = $_POST['vehicle_no'];
@@ -116,7 +116,7 @@
                     <input type="checkbox" name="agree" class="checkbox">
                     <label for="agree" >I certify that the above information is true and that I agree to the terms & conditions mentiond in the insurance policy statement of the company.</label><br>
                         <br>
-                        <button type="submit">Register</button>
+                        <button name="Register" type="submit">Register</button>
                     </form>
 
                     
