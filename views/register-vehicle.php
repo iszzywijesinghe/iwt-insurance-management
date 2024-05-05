@@ -78,14 +78,15 @@
                         </div>
                     </div>
                         <br>
-                    <div class="bottom-text">    
+                        <div class="bottom-text">    
                     <p>By creating an account you agree to our <a class="terms" href="#">Terms & Privacy</a>.</p>
-                    
+                    </div>
                     <input type="checkbox" name="agree" class="checkbox">
                     <label for="agree" >I certify that the above information is true and that I agree to the terms & conditions mentiond in the insurance policy statement of the company.</label><br>
-                        <br></div>
+                        <br>
                         <button type="submit">Register</button>
                     </form>
+
                     
                 </div>
             </div>
