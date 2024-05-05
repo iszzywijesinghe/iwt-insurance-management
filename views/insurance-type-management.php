@@ -12,6 +12,7 @@
 		<div class="Insurance Types Management Page">
 			<h2>Insurance Types Management</h2>
 		</div>
+        
 		<div class="form-container">
 			<form action="#" method="post">
 
