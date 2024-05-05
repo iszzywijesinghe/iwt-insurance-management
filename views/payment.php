@@ -16,16 +16,12 @@
 		<div class="form-container">
 			<form action="#" method="post">
 				<div class="form-group">
-					<label for="name">Insurance Type</label>
-					<select name="ins_type" id="ins_type" required>
-						<option value="" disabled selected>Select Insurance Type</option>
-						<option value="full">Full</option>
-						<option value="third_party">Third Party</option>
-					</select>
+					<label for="name">Claim Id</label>
+					<input type="text" id="name" name="name" required>
 				</div>
 
 				<div class="form-group-ins">
-					<label for="name">Expire Date</label>
+				<label for="name">Vehicle No</label>
 					<input type="text" id="name" name="name" required>
 				</div>
 
