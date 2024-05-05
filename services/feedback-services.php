@@ -17,10 +17,33 @@ function viewFeedback()
     }
 }
 
-function addFeedback()
+function addFeedback($fbId, $rate, $des, $nic)
 {
     try {
-        $insertQuery = "";
+        $insertQuery = "INSERT INTO feedback (
+        feedback_id,
+        rate,
+        description,
+        accident_grade,
+        cus_nic
+        ) VALUES ( 
+        '$fbId' , 
+        '$rate' , 
+        '$des', 
+        '$nic' 
+        )";
+
+        $result = mysqli_query(getConnectionInstance(), $insertQuery);
+
+        if (!$result) {
+
+            $message = "Error Inserting Data" . mysqli_error(getConnectionInstance());
+            echo "<script type='text/javascript'>alert('$message');</script>";
+
+        } else {
+            echo "<script type='text/javascript'>alert('Data Inserted Sucessfully');</script>";
+        }
+
     } catch (Exception $e) {
         echo $e->getMessage();
     }
