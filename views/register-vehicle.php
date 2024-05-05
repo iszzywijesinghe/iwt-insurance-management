@@ -3,15 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Register</title>
-        
+        <title>Register New Vehicle</title>
         <link rel="stylesheet" href="../asserts/css/Regstylesheet.css">
         <link rel="stylesheet" type="text/css" href="../asserts/css/style-nav-h.css">
         <link rel="stylesheet" type="text/css" href="../asserts/css/footer-styles.css">
     </head>
     <body>
-            <!--navbar container-->
-            <?php include '../partials/nav-bar-h.php' ?>
+            
+    <?php include '../partials/nav-bar-h.php' ?>
 
             <!--image container-->
             <div class="img_container"> 
@@ -19,7 +18,7 @@
             </div>
 
             <!--center container-->
-            <div class="center_container1">
+            <div class="center_container">
                 <div class="form_container">
                     <form id="registerForm">
                         <h1>Register Now!!!</h1>
@@ -29,44 +28,49 @@
                             
                         <div class="form_only">
                         <div class="form-group">
-                        <div class="head">
-                                <span> Customer Details </span><br><br>
+                            <div class="head">
+                                <span> Vehicle Details </span><br><br>
                             </div>
-                            <label class="lable_name"  for="CustomerNic">Customer NIC : </label><br>
-                            <input  type="text" id="CustomerNic" name="CustomerNic" required>
+                            <label class="lable_name"  for="FullName">National Identy Card Number (NIC): </label><br>
+                            <input  type="text" id="FullName" name="FullName" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name"  for="FirstName">First Name : </label><br>
-                            <input type="text" id="FirstName" name="FirstName" required>
+                            <label class="lable_name"  for="owner'sNICno">Vehicle No. : </label><br>
+                            <div class="whitebox">
+                            <input type="text" id="owner'sNICno" name="owner'sNICno" required>
+                            </div>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name" for="LastName">Last Name : </label><br>
-                            <input type="text" id="LastName" name="LastName" required>
+                            <label class="lable_name" for="Engineno">Engine No.: </label><br>
+                            <input type="text" id="Engineno" name="Engineno" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name" for="email">Email : </label><br>
-                            <input type="text" id="email" name="email" required>
+                            <label class="lable_name" for="chassisno">Chassis No.: </label><br>
+                            <input type="text" id="chassisno" name="chassisno" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name" for="Houseno">House no : </label><br>
-                            <input type="text" id="Houseno" name="Houseno" required>
+                            <label class="lable_name"  for="vehicletype">Insurance Type: </label><br>
+                            <input type="text" id="vehicletype" name="vehicletype" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name"  for="streetno">Street no : </label><br>
-                            <input type="text" id="streetno" name="streetno" required>
+                            <label class="lable_name"  for="vehiclemodel">Vehicle Brand: </label><br>
+                            <input type="text" id="vehiclemodel" name="vehiclemodel" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name"  for="city"> City : </label><br>
-                            <input type="text" id="city" name="city" required>
+                            <label class="lable_name"  for="YOM">Vehicle Model: </label><br>
+                            <input type="text" id="YOM" name="YOM" required>
                         </div><br>
                         <div class="form-group">
-                            <label class="lable_name"  for="Gender">Gender : </label><br>
-                            <input type="text" id="Gender" name="Gender" required>
+                            <label class="lable_name"  for="vehiclevalue">Vehicle Value: </label><br>
+                            <input type="text" id="vehiclevalue" name="vehiclevalue" required>
                         </div><br>
-                       
+                        <div class="form-group">
+                            <label class="lable_name"  for="insurancetype">Year of Manufactured(YOM): </label><br>
+                            <input type="text" id="insurancetype" name="insurancetype" required>
+                        </div>
                     </div>
                         <br>
-                        <div class="bottom-text">    
+                    <div class="bottom-text">    
                     <p>By creating an account you agree to our <a class="terms" href="#">Terms & Privacy</a>.</p>
                     
                     <input type="checkbox" name="agree" class="checkbox">
@@ -74,12 +78,11 @@
                         <br></div>
                         <button type="submit">Register</button>
                     </form>
+                    
                 </div>
             </div>
-
-           
-   <!--footer container-->
-   <?php include '../partials/footer-index.php' ?>
+            <?php include '../partials/footer-index.php' ?>
+          
             
 
 
