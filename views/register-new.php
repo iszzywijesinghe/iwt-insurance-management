@@ -14,8 +14,17 @@
             <?php include '../partials/nav-bar-h.php' ?>
 
             <!--image container-->
+            <div class="top_container">
+            <!--image container-->
+            <div class="image_hover">
             <div class="img_container"> 
                 <img class="car_image" src = "../asserts/img/register image.png">
+            </div>
+            <div class="heading1">
+            <h2>Register Today!</h2>
+            <h1>Be Sure Your Vehicle's Safe</h1>
+             </div>
+</div>
             </div>
 
             <!--center container-->

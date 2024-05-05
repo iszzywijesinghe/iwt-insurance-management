@@ -11,23 +11,20 @@ body {
     overflow-x: hidden;
 }
 
-/*navbar_container*/
-.navbar_container{
-    
-    width: 100vw;
-    height: 100px;
-}
+
 
 
 /*image container*/
 .img_container {
     
     width: 100vw;
-    height: 460px;
+    height: 560px;
+    
 }
 .car_image{
     width: 100vw;
-    height: 460px;
+    height: 560px;
+    opacity: 60%;
 
 }
 
@@ -54,7 +51,6 @@ body {
     text-align: center;
     margin-left: 250px;
     margin-right: 250px;
-    
     color: white;
     
 }
@@ -64,7 +60,6 @@ body {
 
 
 .form_only{
-    
     margin-left: 300px;
     text-align: center;
     width: fit-content;
@@ -86,6 +81,7 @@ body {
 
 .bottom-text{
     text-align: center;
+<<<<<<< HEAD
 <<<<<<< HEAD
     display: flex;
     flex-direction: column;
@@ -110,4 +106,29 @@ body {
     margin-bottom: 0;
 =======
 >>>>>>> 96fd541e578de52b3dad48389a1d03c2f6e312c2
+=======
+}
+
+.image_hover{
+    width: 100vw;
+    height: 560px;
+    background-color: darkblue;
+}
+
+.top_container{
+    width: 100vw;
+    height: 560px;
+    
+}
+
+.heading1{
+    position: absolute;
+    top: 54%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+>>>>>>> 9aeccb8646b882164c07a9d6cdb9a6bc2c6b4b3f
 }
