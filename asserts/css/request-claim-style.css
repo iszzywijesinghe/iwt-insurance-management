@@ -1,0 +1,38 @@
+
+.form-container {
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-field {
+    width: 25%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+  }
+  
+  textarea.input-field {
+    height: 25px;
+    width: 100%;
+  }
+  
+  
+  .submit-button {
+    background-color:blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color:lightblue;
+  }
+  

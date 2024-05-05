@@ -25,7 +25,7 @@
 
         <!--image container-->
         <div class="img_container">
-            <img class="car_image" src="./asserts/img/home img.jpg">
+            <img class="car_image" src="./asserts/img/home.png">
         </div>
 
         <div class="heading1">

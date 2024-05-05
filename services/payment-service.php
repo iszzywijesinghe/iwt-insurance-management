@@ -1,10 +1,10 @@
 <?php
 include ("../utils/db-connection.php");
 
-function viewFeedback()
+function viewPayment()
 {
     try {
-        $viewQuery = "SELECT * FROM feedback";
+        $viewQuery = "SELECT * FROM payment";
         $results = mysqli_query(getConnectionInstance(), $viewQuery);
         if (!$results) {
             $message = "Error Fetching Data" . mysqli_error(getConnectionInstance());
@@ -17,18 +17,21 @@ function viewFeedback()
     }
 }
 
-function addFeedback($rate, $des, $nic)
+function addPayment($type, $insExpDate, $cName, $cNo, $cvv, $cardExpDate)
 {
     try {
-        $insertQuery = "INSERT INTO feedback (
+        $insertQuery = "INSERT INTO payment (
         rate,
         description,
         accident_grade,
         cus_nic
         ) VALUES (  
-        '$rate' , 
-        '$des', 
-        '$nic' 
+        '$type',
+        '$insExpDate', 
+        '$cName', 
+        '$cNo', 
+        '$cvv', 
+        '$cardExpDate' 
         )";
 
         $result = mysqli_query(getConnectionInstance(), $insertQuery);

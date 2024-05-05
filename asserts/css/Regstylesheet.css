@@ -11,22 +11,20 @@ body {
     overflow-x: hidden;
 }
 
-/*navbar_container*/
-.navbar_container{
-    
-    width: 100vw;
-    height: 100px;
-}
+
+
 
 /*image container*/
 .img_container {
     
     width: 100vw;
-    height: 460px;
+    height: 560px;
+    
 }
 .car_image{
     width: 100vw;
-    height: 460px;
+    height: 560px;
+    opacity: 60%;
 
 }
 
@@ -34,18 +32,25 @@ body {
 .center_container {
     
     width: 100vw;
-    height: 730px;
+    height: 1100px;
     background-color: darkblue;
-    padding-top: 30px;
+    padding-top: 50px;
+}
+
+.center_container1 {
+    
+    width: 100vw;
+    height: 1100px;
+    background-color: darkblue;
+    padding-top: 50px;
 }
 .form_container{
     
-    width: 1000px;
+    width: 100;
     height: 680px;
     text-align: center;
     margin-left: 250px;
     margin-right: 250px;
-    
     color: white;
     
 }
@@ -53,84 +58,28 @@ body {
     color: white;
 }
 
-.lable_name{
-    
-    
-}
 
 .form_only{
-    
     margin-left: 300px;
     text-align: center;
     width: fit-content;
-}
-
-/*footer_container*/
-.footer_container{
-    
-    width: 100vw;
-    height: 150px;
-    
-}
-.f_container{
-    
-    width: 100vw;
-    height: fit-content;
-    
-}
-
-footer{
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-
+    border: 2px solid white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 20px;
+    font-size: 20px;
+    width: 400px;
+    line-height: 25px;
+    font-family:Arial, Helvetica, sans-serif
 
 }
-.footlogo{
-    
-    position: fixed;
-    top: 76%;
-    left: 22%;
-    height: fit-content;
-    width: fit-content;
-    transform: translateY(5px);  
+
+
+.intro-paragraph{
+    font-size: 20px;
 }
 
-.footlogo img{
-    height: 140px;
-    width: 140px;
-}
-
-h3.footerhead{
-    margin-top: 1px;
-    margin-bottom: 1px;
-}
-
-h5.footerbody{
-    margin-top: 1px;
-    margin-bottom: 1px;
-}
-
-.containerf{
-    
-    
-    height: fit-content;
-    padding: 30px;
-    padding-left: 500px;
-    margin-bottom:0;
-    color: darkblue;
-    background-color: white;
-    
-    
-    
-}
-
-.containerf2{
-
-    height: 30px;
-    color: white;
-    background-color: darkblue;
+.bottom-text{
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -141,7 +90,56 @@ h5.footerbody{
     margin-bottom: 0;
     
 }
-
+.button
+{
+    transition-duration: 0.4s;
+    font-size: 12px;;
+}
+.button:hover
+{
+    background-color:darkblue;
+    color:white;
+}
 .myfooter{
     margin-bottom: 0;
+
+}
+
+.image_hover{
+    width: 100vw;
+    height: 560px;
+    background-color: darkblue;
+}
+
+.top_container{
+    width: 100vw;
+    height: 560px;
+    
+}
+
+.heading1{
+    position: absolute;
+    top: 54%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    background-color: white;
+    border: none;
+    color: darkblue;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 40%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: blue;
+    color: white;
 }
