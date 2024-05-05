@@ -17,7 +17,7 @@
     include ("../services/insurance-types-service.php");
     
 
-    if (isset($_POST['v-submit'])) {
+    if (isset($_POST['v-Submit'])) {
 
         $cus_nic = $_POST['cus_nic'];
         $insurance_type = $_POST['insurance_type'];
@@ -92,7 +92,7 @@
 				</div>
 
 				<div class="button">
-					<button type="submit">Submit</button>
+					<button name = "Submit" type="submit">Submit</button>
 				</div>
 			
 			</form>
