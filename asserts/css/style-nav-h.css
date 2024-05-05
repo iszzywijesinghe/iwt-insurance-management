@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+:root {
+  --max_width: 1200px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+nav {
+  background-color: #0e1079;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  height: 70px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 50px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.user-circle {
+  background-color: #fff;
+  margin-right: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-weight: bold;
+}
+
+.logo{
+  margin-left: 40px;
+}
