@@ -141,7 +141,15 @@ h5.footerbody{
     margin-bottom: 0;
     
 }
-
+.button
+{
+    transition-duration: 0.4s;
+}
+.button:hover
+{
+    background-color:white;
+    color:skyblue;
+}
 .myfooter{
     margin-bottom: 0;
 }

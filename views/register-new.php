@@ -76,7 +76,8 @@
                     
                     <input type="checkbox" name="agree" class="checkbox">
                     <label for="agree" >I certify that the above information is true and that I agree to the terms & conditions mentiond in the insurance policy statement of the company.</label><br>
-                        
+                        <br>
+                        <br>
                         <button type="submit">Register</button>
                     </form>
                 </div>
