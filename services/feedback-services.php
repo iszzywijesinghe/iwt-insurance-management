@@ -23,7 +23,7 @@ function addFeedback($rate, $des)
         $insertQuery = "INSERT INTO feedback (
         rate,
         description
-        ) VALUES (  
+        ) VALUES (
         '$rate', 
         '$des'
         )";
@@ -39,6 +39,22 @@ function addFeedback($rate, $des)
             echo "<script type='text/javascript'>alert('Data Inserted Sucessfully');</script>";
         }
 
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+}
+
+function getUpdateRow($id)
+{
+    try {
+        $viewQuery = "SELECT * FROM feedback WHERE feedback_id = '$id'";
+        $results = mysqli_query(getConnectionInstance(), $viewQuery);
+        if (!$results) {
+            $message = "Error Fetching Data" . mysqli_error(getConnectionInstance());
+            echo "<script type='text/javascript'>alert('$message');</script>";
+        } else {
+            return ($results);
+        }
     } catch (Exception $e) {
         echo $e->getMessage();
     }

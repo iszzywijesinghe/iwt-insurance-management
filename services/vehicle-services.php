@@ -34,7 +34,7 @@ function addVehicle($customerNic, $vehicleNo, $chassisNo, $engineNo, $insuranceT
         '$customerNic' , 
         '$vehicleNo' ,
         '$engineNo',
-        '$chassisNo' ,  
+        '$chassisNo',  
         '$insuranceType',
         '$vehicleBrand',
         '$vehicleModle',
@@ -70,6 +70,38 @@ function getUpdateRow($id)
         } else {
             return ($results);
         }
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+}
+function updateClaim($id, $customerNic, $vehicleNo, $engineNo, $chassisNo, $insuranceType, $vehicleBrand, $vehicleModle, $vehicleValue, $yom)
+{
+    try {
+        $updateQuery = "UPDATE claim 
+        SET 
+        cus_nic='$customerNic', 
+        vehicle_no='$vehicleNo',
+        engine_no='$engineNo',
+        chassis_no='$chassisNo',
+        insurance_type='$insuranceType',
+        vehicle_brand='$vehicleBrand',
+        vehicle_modle='$vehicleModle',
+        vehicle_value='$vehicleValue',
+        yom='$yom'
+        WHERE 
+        v_id=$id";
+       
+       $result = mysqli_query(getConnectionInstance(), $updateQuery);
+
+        if (!$result) {
+
+            $message = "Error Inserting Data" . mysqli_error(getConnectionInstance());
+            echo "<script type='text/javascript'>alert('$message');</script>";
+
+        } else {
+            echo "<script type='text/javascript'>alert('Data Updated Sucessfully');</script>";
+        }
+
     } catch (Exception $e) {
         echo $e->getMessage();
     }
