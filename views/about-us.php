@@ -3,22 +3,24 @@
 
 <head>
     <title>About Us</title>
-    <link rel="stylesheet" href="../asserts/css/style123.css">
+    <link rel="stylesheet" href="../asserts/css/about-us.css">
+    <link rel="stylesheet" type="text/css" href="../asserts/css/style-nav-h.css">
+    <link rel="stylesheet" type="text/css" href="../asserts/css/footer-new.css">
 </head>
 
 <body>
+<?php include '../partials/nav-bar-h.php' ?>
 
-    <div class="heading">
-        <h1>About us</h1>
-    </div>
-
-    <div class="imghcontainer">
-        <p class="imgtext">
-            We serve you the best Motor Insuarnce Solution
-            
-        </p>
-    </div>
-
+<div class="image_hover">
+            <div class="img_container"> 
+                <img class="car_image" src = "../asserts/img/contact.png">
+            </div>
+            <div class="heading1">
+            <h2>About Us!</h2>
+            <h1 class="des"></h1>
+             </div>
+</div>
+<div class="all-cont">
     <div class="container">
         <section class="about">
             <div class="about-image">
@@ -34,12 +36,14 @@
             </div>
         </section>
     </div>
-    <div style="display: flex; flex-direction:row; margin-top:4%; gap: 30px; height:60%;">
+    <div style="display: flex; flex-direction:row; margin-top:4%; gap: 30px; ;">
         <div style="width: 50%;;" class="box-border">
-            <h2 style="padding: 15px;" class="our-vision">Our Vision</h2>
+        <div class="our-vision">
+            <h2 style="padding: 15px;">Our Vision</h2>
             <p class="vparah">To be the Nation's first choice for risk Protection</p>
         </div>
-        <div style="width: 50%;" class="box-border">
+        </div>
+        <div style="width: 50%;" class="our-mission">
             <h2 style="text-align: center; margin-top: 10px;">Our Mission</h2>
             <p style="text-align: center; margin-top: 10px;">We provide risk protection and life investment optimisation, that will deliver value to our customers through a team of committed professionals, whose contribution we recognise and value leading to superior shareholder value, whilst being a responsible corporate citizen</p>
         </div>
@@ -92,29 +96,12 @@
         </div>
         </div>
     </div>
-
-    <footer id="myfooter">
-        <div class="containerf">
-            <h3 class="footerhead">MotorGurad Insurance (PVT) Ltd</h3>
-            <h5 class="footerbody">22/B-402, Bank of Ceylon Mawatha, Colombo.</h5>
-            <h5 class="footerbody">+94 77 333 4444/ +94 112 333 444</h5>
-            <h5 class="footerbody">info@motoguard.insurance.lk</h5>
-            <div class="footlogo">
-                <img src="../asserts/img/logo.png" alt="logo">
-            </div>
-        </div>
-        <div class="containerf2">
-            <h6>All Right Reserved. Develop and Maintain by MotorGuard Insurance IT</h6>
-
-        </div>
-
-    </footer>
+    </div>
 
 
 
 
-
-
+    <?php include '../partials/footer-new.php' ?>
 </body>
 
 
