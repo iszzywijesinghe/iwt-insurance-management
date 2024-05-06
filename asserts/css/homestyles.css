@@ -92,7 +92,7 @@ button:hover {
 
 /*bottom*/
 .b_container{
-    padding-top: 50px;
+    padding-top: 40px;
     display: flex;
     align-items: center;
     
@@ -128,9 +128,10 @@ button:hover {
 
 .form{
     text-align: center;
-    margin-left: 25%;
-    margin-right: auto;
+    margin: auto;
     color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .form_label {
