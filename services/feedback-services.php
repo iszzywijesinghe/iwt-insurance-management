@@ -59,4 +59,56 @@ function getUpdateRow($id)
         echo $e->getMessage();
     }
 }
+
+function updateFeedback($id, $rate, $des)
+{
+    try {
+        $updateQuery = "UPDATE feedback 
+        SET 
+        rate='$rate', 
+        description='$des'
+        WHERE 
+        feedback_id=$id";
+
+        $result = mysqli_query(getConnectionInstance(), $updateQuery);
+
+        if (!$result) {
+
+            $message = "Error Inserting Data" . mysqli_error(getConnectionInstance());
+            echo "<script type='text/javascript'>alert('$message');</script>";
+
+        } else {
+            echo "<script type='text/javascript'>alert('Data Updated Sucessfully');</script>";
+        }
+
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+}
+
+function deleteFeedback($id)
+{
+    try {
+        $deleteQuery = "DELETE FROM feedback 
+        WHERE 
+        feedback_id=$id";
+
+        $result = mysqli_query(getConnectionInstance(), $deleteQuery);
+
+        if (!$result) {
+
+            $message = "Error Deleting Data" . mysqli_error(getConnectionInstance());
+            echo "<script type='text/javascript'>alert('$message');</script>";
+
+        } else {
+            echo "<script type='text/javascript'>alert('Item Deleted Sucessfully');</script>";
+        }
+
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+}
+
+
+
 ?>
