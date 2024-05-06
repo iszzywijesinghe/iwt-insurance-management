@@ -32,19 +32,25 @@
     </style>
 </head>
 
-<body>
-    <?php
-    include ("../partials/user-dashboard-navbar-sm.php");
-    include ("../utils/url-helper.php");
+<?php
+    include ("../services/vehicle-services.php");
 
-    // add logic
-    if (isset($_POST['v-submit'])) {
+    if (isset($_POST['Register'])) {
 
-        $vehicleNo = $_POST['v-no'];
-        $vehiclePhotos = $_POST['v-photos'];
-        $date = $_POST['v-date'];
-        $grade = $_POST['v-grade'];
-        addClams($vehicleNo, $vehiclePhotos, $date, $grade);
+        $customerNic = $_POST['cus_nic'];
+        $vehicleNo = $_POST['vehicle_no'];
+        $engineNo = $_POST['engine_no'];
+        $chassisNo = $_POST['chassis_no'];
+        $insuranceType = $_POST['insurance_type'];
+        $vehicleBrand = $_POST['vehicle_brand'];
+        $vehicleModle = $_POST['vehicle_modle'];
+        $vehicleValue = $_POST['vehicle_value'];
+        $yom = $_POST['yom'];
+
+
+        addVehicle($customerNic, $vehicleNo, $chassisNo, $engineNo, $insuranceType, $vehicleBrand, $vehicleModle, $vehicleValue, $yom);
+
+
     }
 
     // update logic 
@@ -213,7 +219,7 @@
                 </div>
                 <!-- End of Update Modal -->
             </div>
-        </div>
+        </div>m
     </div>
 
 </body>
