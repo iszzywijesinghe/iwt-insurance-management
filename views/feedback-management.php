@@ -39,7 +39,6 @@
 
         $rate = $_POST['rating'];
         $des = $_POST['fb_note'];
-    // $nic = $_POST['']; TODO: get the element 
 
         addFeedback($rate, $des);
 
@@ -57,9 +56,12 @@
 
 
         // update logic 
-        $fbId = deconsturctURLFragment($_SERVER["QUERY_STRING"]);
-        $feedbackRow = getUpdateRow($fbId)->fetch_array(MYSQLI_ASSOC);
+        // $fbId = deconsturctURLFragment($_SERVER["QUERY_STRING"]);
+        // $feedbackRow = getUpdateRow($fbId)->fetch_array(MYSQLI_ASSOC);
     }
+
+    $fbId = deconsturctURLFragment($_SERVER["QUERY_STRING"]);
+    $feedbackRow = getUpdateRow($fbId)->fetch_array(MYSQLI_ASSOC);
 
 
     ?>
@@ -154,7 +156,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Rating</label>
-                                        <input type="number" class="form-control" id="rating" placeholder="Enter Rating" name="rating" value="<?php echo $feedbackRow["rate"]; ?>" required>
+                                        <input type="text" class="form-control" id="rating" placeholder="Enter Rating" name="rating" value="<?php echo $feedbackRow["rate"]; ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Description</label>
