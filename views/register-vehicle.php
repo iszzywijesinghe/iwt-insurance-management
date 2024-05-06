@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+
+<?php include ("../services/clam-management-service.php");
+?>
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +11,11 @@
         <link rel="stylesheet" href="../asserts/css/Regstylesheet.css">
         <link rel="stylesheet" type="text/css" href="../asserts/css/style-nav-h.css">
         <link rel="stylesheet" type="text/css" href="../asserts/css/footer-new.css">
+
+        <script src="../asserts/js/clam-management.js"></script>
+
     </head>
     <body>
-
-
     <?php
     include ("../services/vehicle-services.php");
 
@@ -29,15 +34,9 @@
 
         addVehicle($customerNic, $vehicleNo, $chassisNo, $engineNo, $insuranceType, $vehicleBrand, $vehicleModle, $vehicleValue, $yom);
 
-        // TODO: Debug this logic
-        // if (
-        //     !empty($vehicleNo) ||
-        //     !empty($vehiclePhotos) ||
-        //     !empty($date) ||
-        //     !empty($grade)
-        // ) {
-        //     addClams($vehicleNo, $vehiclePhotos, $date, $grade);
-        // }
+            // update logic 
+    $vId = deconsturctURLFragment($_SERVER["QUERY_STRING"]);
+    $clamRow = getUpdateRow($vId)->fetch_array(MYSQLI_ASSOC);
     }
 
     ?>
