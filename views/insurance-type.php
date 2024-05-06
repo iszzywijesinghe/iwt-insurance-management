@@ -5,9 +5,41 @@
         <link rel="stylesheet" type="text/css" href="../asserts/css/insurance-type.css">
         <link rel="stylesheet" type="text/css" href="../asserts/css/style-nav-h.css">
         <link rel="stylesheet" type="text/css" href="../asserts/css/footer-new.css">
+        <link rel="stylesheet" type="text/css" href="../asserts/css/types-management.css">
     </head>
 
     <body>
+    <?php include '../partials/nav-bar-h.php' ?>
+
+    <?php
+    include ("../services/insurance-types-service.php");
+    include ("../utils/url-helper.php");
+
+    if (isset($_POST['Submit'])) {
+
+        $cus_nic = $_POST['customer_nic'];
+        $vehicle_no = $_POST['vehicle_no'];
+        $insurance_type = $_POST['ins_type'];
+        $price = $_POST['value'];
+        $description = $_POST['message'];
+
+        addinsuranceTypes($cus_nic, $vehicle_no, $insurance_type, $price, $description);
+
+        // TODO: Debug this logic
+        // if (
+        //     !empty($vehicleNo) ||
+        //     !empty($vehiclePhotos) ||
+        //     !empty($date) ||
+        //     !empty($grade)
+        // ) {
+        //     addClams($vehicleNo, $vehiclePhotos, $date, $grade);
+        // }
+        }
+
+		
+
+    ?>
+
         <div class="bodycon">
             <h1 class="heading">Insurance Types</h1>
             <h3 class="subhead">Third - Party Insurance</h3>
@@ -27,6 +59,52 @@
                 <li>Our telephone lines are open 24 hours a day, 365 days a year for you and your insurance agent will come to you as soon as an accident occurs and give you the advice you need.</li><br>
              </ul>
              </div>
+             <div class="new-form">
+             <div class="middle">
+		<div class="form-container">
+        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
+			<h2>Select Your Insurance Type</h2>
+
+				<div class="form-group-ins">
+					<label for="name">Customer NIC:</label>
+					<input type="text" id="customer_nic" name="customer_nic" required>
+				</div>
+
+				<div class="form-group">
+					<label for="name">Vehicle No.:</label>
+					<input type="text" id="vehicle_no" name="vehicle_no" required>
+				</div>
+
+                <div class="form-group">
+					<label for="name">Insurance Type:</label>
+					<select name="ins_type" id="ins_type" required>
+						<option value="" disabled selected>Select Insurance Type</option>
+						<option value="full">Full</option>
+						<option value="third_party">Third Party</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="name">Value:</label>
+					<input type="text" id="value" name="value" required>
+				</div>
+
+				<div class="form-group">
+					<label for="name">Message:</label>
+					<input type="text" id="message" name="message" required>
+				</div>
+
+				<div class="button">
+					<button name="Submit" type="submit">Submit</button>
+				</div>
+			
+			</form>
+		</div>
+		</div>
+
+		        
+             </div>
+
 <!--footer container-->
 <?php include '../partials/footer-new.php' ?>
     </body>

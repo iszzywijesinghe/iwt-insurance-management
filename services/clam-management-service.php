@@ -7,7 +7,7 @@ function viewClams()
         $viewQuery = "SELECT * FROM claim";
         $results = mysqli_query(getConnectionInstance(), $viewQuery);
         if (!$results) {
-            $message = "Error Fetching Data" . mysqli_error(Connection());
+            $message = "Error Fetching Data" . mysqli_error(getConnectionInstance());
             echo "<script type='text/javascript'>alert('$message');</script>";
         } else {
             return ($results);
@@ -75,8 +75,8 @@ function updateClaim($id, $vehicleNo, $vehiclePhotos, $date, $grade)
         accident_grade='$grade'
         WHERE 
         claim_id=$id";
-       
-       $result = mysqli_query(getConnectionInstance(), $updateQuery);
+
+        $result = mysqli_query(getConnectionInstance(), $updateQuery);
 
         if (!$result) {
 
@@ -85,6 +85,29 @@ function updateClaim($id, $vehicleNo, $vehiclePhotos, $date, $grade)
 
         } else {
             echo "<script type='text/javascript'>alert('Data Updated Sucessfully');</script>";
+        }
+
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+}
+
+function deleteClaim($id)
+{
+    try {
+        $deleteQuery = "DELETE FROM claim 
+        WHERE 
+        claim_id=$id";
+
+        $result = mysqli_query(getConnectionInstance(), $deleteQuery);
+
+        if (!$result) {
+
+            $message = "Error Deleting Data" . mysqli_error(getConnectionInstance());
+            echo "<script type='text/javascript'>alert('$message');</script>";
+
+        } else {
+            echo "<script type='text/javascript'>alert('Item Deleted Sucessfully');</script>";
         }
 
     } catch (Exception $e) {

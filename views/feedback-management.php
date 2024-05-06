@@ -38,8 +38,7 @@
     if (isset($_POST['fb-submit'])) {
 
         $rate = $_POST['rating'];
-        $des = $_POST['fb_note'];
-    // $nic = $_POST['']; TODO: get the element 
+        $des = $_POST['description'];
 
         addFeedback($rate, $des);
 
@@ -57,10 +56,29 @@
 
 
         // update logic 
-        $fbId = deconsturctURLFragment($_SERVER["QUERY_STRING"]);
-        $feedbackRow = getUpdateRow($fbId)->fetch_array(MYSQLI_ASSOC);
+        // $fbId = deconsturctURLFragment($_SERVER["QUERY_STRING"]);
+        // $feedbackRow = getUpdateRow($fbId)->fetch_array(MYSQLI_ASSOC);
     }
 
+    $fbId = deconsturctURLFragment($_SERVER["QUERY_STRING"]);
+    $feedbackRow = getUpdateRow($fbId)->fetch_array(MYSQLI_ASSOC);
+
+    if (isset($_POST['fb-edit-submit'])) {
+
+        $id = $_POST['feedback_id'];
+        $rate = $_POST['rating'];
+        $des = $_POST['description'];
+
+        updateFeedback($id, $rate, $des);
+
+    }
+
+    // Delete logic
+    
+    if (isset($_POST['fb-delete-submit'])) {
+        $id = $_POST['feedback_id'];
+        deleteFeedback($id);
+    }
 
     ?>
 
@@ -90,10 +108,12 @@
                                 echo "<td>" . $fb[1] . "</td>";
                                 echo "<td>" . $fb[2] . "</td>";
                                 echo "<td>";
-                                echo "<div>";
-                                // echo " <form method='post' enctype='multipart/form-data'>";
+                                echo "<div style='flex-direction: row; display:flex; gap:10px;'>";
                                 echo " <button onclick='getFeedbackId(" . $fb[0] . ")' data-toggle='modal' data-target='#updateModal' class='btn btn-primary edit'>Edit</button>";
-                                // echo " </form>";
+                                echo " <form method='post' enctype='multipart/form-data'>";
+                                echo " <input type='hidden' name='feedback_id' id='feedback_id' value=" . $fb[0] . " >";
+                                echo " <button type='submit' name='fb-delete-submit' class='btn btn-danger'>Delete</button>";
+                                echo " </form>";
                                 echo "</div>";
                                 echo "</td>";
                                 echo "</tr>";
@@ -115,7 +135,7 @@
                                 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <label>Feedback Id</label>
-                                        <input type="text" class="form-control" id="fb-id" placeholder="Enter Feedback Id" name="fb-id" required>
+                                        <input type="text" class="form-control" id="feedback_id" placeholder="Enter Feedback Id" name="feedback_id" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Rating</label>
@@ -123,7 +143,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Description</label>
-                                        <input type="text" class="form-control" id="f-des" placeholder="Enter Description" name="f-des" required>
+                                        <input type="text" class="form-control" id="description" placeholder="Enter Description" name="description" required>
                                     </div>
                                     <button type="submit" name="fb-submit" class="btn btn-default">Add</button>
                                 </form>
@@ -150,17 +170,17 @@
                                     <input type="hidden" name="feedback-id" id="feedback-id">
                                     <div class="form-group">
                                         <label>Feedback Id</label>
-                                        <input type="text" class="form-control" id="fb_id" placeholder="Enter Feedback Id" name="fb-id" value="<?php echo $feedbackRow["feedback_id"]; ?>" required>
+                                        <input type="text" class="form-control" id="feedback_id" placeholder="Enter Feedback Id" name="feedback_id" value="<?php echo $feedbackRow["feedback_id"]; ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Rating</label>
-                                        <input type="number" class="form-control" id="rating" placeholder="Enter Rating" name="rating" value="<?php echo $feedbackRow["rate"]; ?>" required>
+                                        <input type="text" class="form-control" id="rating" placeholder="Enter Rating" name="rating" value="<?php echo $feedbackRow["rate"]; ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Description</label>
-                                        <input type="text" class="form-control" id="f-des" placeholder="Enter Description" name="f-des" value="<?php echo $feedbackRow["description"]; ?>" required>
+                                        <input type="text" class="form-control" id="description" placeholder="Enter Description" name="description" value="<?php echo $feedbackRow["description"]; ?>" required>
                                     </div>
-                                    <button type="submit" name="v-edit-submit" class="btn btn-default">Add</button>
+                                    <button type="submit" name="fb-edit-submit" class="btn btn-default">Add</button>
                                 </form>
                             </div>
                             <div class="modal-footer">

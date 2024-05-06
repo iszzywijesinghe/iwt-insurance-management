@@ -132,7 +132,7 @@
                             <div class="modal-body">
                                 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post"
                                     enctype="multipart/form-data">
-                                    <input type="hidden" name="vId" id="clamId">
+                                    <input type="hidden" name="vId" id="v_id">
                                     <div class="form-group">
                                         <label>Customer NIC</label>
                                         <input type="text" class="form-control" id="cus_nic" placeholder="Enter cus_nic"
