@@ -95,4 +95,30 @@ function updateinsuranceTypes($id, $cus_nic, $vehicle_no, $insurance_type, $pric
         echo $e->getMessage();
     }
 }
+
+function deleteInsuranceType($id)
+{
+    try {
+        $deleteQuery = "DELETE FROM insurance_type 
+        WHERE 
+        i_type_id=$id";
+
+        $result = mysqli_query(getConnectionInstance(), $deleteQuery);
+
+        if (!$result) {
+
+            $message = "Error Deleting Data" . mysqli_error(getConnectionInstance());
+            echo "<script type='text/javascript'>alert('$message');</script>";
+
+        } else {
+            echo "<script type='text/javascript'>alert('Item Deleted Sucessfully');</script>";
+        }
+
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+}
+
+
+
 ?>
