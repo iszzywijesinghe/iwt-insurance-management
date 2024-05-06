@@ -66,17 +66,18 @@ function getUpdateRow($id)
     }
 }
 
-function updateClaim($id, $vehicleNo, $vehiclePhotos, $date, $grade)
+function updateClaim($id, $cusNic, $vehicleNo, $requestDate, $approvedDate)
 {
     try {
-        $updateQuery = "UPDATE claim 
+        $updateQuery = "UPDATE claim_status 
         SET 
-        vehicle_no='$vehicleNo', 
-        vehicle_photos='$vehiclePhotos',
-        date='$date',
-        accident_grade='$grade'
+        cus_nic='$cusNic', 
+        vehicle_no='$vehicleNo',
+        request_date='$requestDate',
+        approved_date='$approvedDate'
         WHERE 
         claim_id=$id";
+        echo $updateQuery;
        
        $result = mysqli_query(getConnectionInstance(), $updateQuery);
 
