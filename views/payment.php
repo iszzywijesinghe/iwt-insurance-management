@@ -10,9 +10,7 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-	<div class="backgrounf">
-=======
+	<div class="background">
 	<?php
 	include("../services/payment-service.php");
 
@@ -43,7 +41,6 @@
 
 
 	?>
->>>>>>> fc68862066d9a8fd371ccf3b8b0af78b1365afe4
 	<div class="dashboard">
 		
 		<div class="form-container">
