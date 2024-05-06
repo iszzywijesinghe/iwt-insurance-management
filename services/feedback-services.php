@@ -17,18 +17,15 @@ function viewFeedback()
     }
 }
 
-function addFeedback($rate, $des, $nic)
+function addFeedback($rate, $des)
 {
     try {
         $insertQuery = "INSERT INTO feedback (
         rate,
-        description,
-        accident_grade,
-        cus_nic
+        description
         ) VALUES (  
-        '$rate' , 
-        '$des', 
-        '$nic' 
+        '$rate', 
+        '$des'
         )";
 
         $result = mysqli_query(getConnectionInstance(), $insertQuery);
