@@ -6,7 +6,7 @@
         <title>Register New Vehicle</title>
         <link rel="stylesheet" href="../asserts/css/Regstylesheet.css">
         <link rel="stylesheet" type="text/css" href="../asserts/css/style-nav-h.css">
-        <link rel="stylesheet" type="text/css" href="../asserts/css/footer-styles.css">
+        <link rel="stylesheet" type="text/css" href="../asserts/css/footer-new.css">
     </head>
     <body>
 
@@ -122,7 +122,7 @@
                     
                 </div>
             </div>
-            <?php include '../partials/footer-index.php' ?>
+            <?php include '../partials/footer-new.php' ?>
           
             
 

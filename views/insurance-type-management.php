@@ -8,7 +8,7 @@
 
 	<link rel="stylesheet" href="../asserts/css/types-management.css">
 	<link rel="stylesheet" type="text/css" href="../asserts/css/style-nav-h.css">
-    <link rel="stylesheet" type="text/css" href="../asserts/css/footer-styles.css">
+    <link rel="stylesheet" type="text/css" href="../asserts/css/footer-new.css">
 </head>
 
 <body>
@@ -40,9 +40,7 @@
 
     ?>
 
-		<div class="Insurance Types Management Page">
-			<h2>Insurance Types Management</h2>
-		</div>
+		
 
 	        <!--image container-->
 			<?php include '../partials/nav-bar-h.php' ?>
@@ -101,7 +99,7 @@
 
 		        <!--footer container-->
 				<div class="footer-container">
-            <?php include '../partials/footer-index.php' ?>
+				<?php include '../partials/footer-new.php' ?>
         </div>
 	
 </body>

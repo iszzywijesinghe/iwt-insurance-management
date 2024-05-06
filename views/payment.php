@@ -6,14 +6,15 @@
 	<meta name=" viewport" content="width=device-width, initial-scale=1.0">
 	<title> Payment Page </title>
 	<link rel="stylesheet" href="../asserts/css/payment-styles.css">
+	<link rel="stylesheet" type="text/css" href="../asserts/css/footer-new.css">
 </head>
 
 <body>
+	<div class="backgrounf">
 	<div class="dashboard">
-		<div class="Payment Page">
-			<h2>Payments</h2>
-		</div>
+		
 		<div class="form-container">
+		<h2>Payments</h2><br>
 			<form action="#" method="post">
 				<div class="form-group">
 					<label for="name">Claim Id</label>
@@ -45,6 +46,7 @@
 					<input type="date" id="name" name="name" required>
 				</div>
 
+				<br>
 				<div class="button">
 					<button type="submit">Pay</button>
 				</div>
@@ -57,6 +59,8 @@
 			</form>
 		</div>
 	</div>
+	</div>
+	<?php include '../partials/footer-new.php' ?>
 </body>
 
 </html>

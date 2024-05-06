@@ -4,10 +4,13 @@
 <head>
     <title>Request Claim</title>
     <link rel="stylesheet" href="../asserts/css/request-claim-style.css">
+    <link rel="stylesheet" type="text/css" href="../asserts/css/footer-new.css">
+
 
 </head>
 
 <body>
+    <div class="background">
     <div class="heading">
         <h1>Request Claim</h1>
     </div>
@@ -49,18 +52,9 @@
         <label for="agree">I agreed to all terms and conditions.</label>
         <input type="Submit" value="Submit" class="submit-button" >
         </div>
-
-
-
-
-
-
-
     </form>
-
-
-
-
+    </div>
+    <?php include '../partials/footer-new.php' ?>
 
 </body>
 

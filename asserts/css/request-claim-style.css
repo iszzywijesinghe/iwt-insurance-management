@@ -2,6 +2,9 @@
 .form-container {
     width: 500px;
     margin: 0 auto;
+    
+    margin-bottom: 30px;
+    padding: 20px;
   }
   
   
@@ -24,8 +27,8 @@
   
   
   .submit-button {
-    background-color:blue;
-    color: white;
+    background-color:white;
+    color: darkblue;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -33,6 +36,15 @@
   }
   
   .submit-button:hover {
-    background-color:lightblue;
+    background-color:white;
+  }
+
+  .background{
+    background-color: darkblue;
+    color: white;
   }
   
+  .heading{
+    text-align: center;
+    padding-top: 5px;
+  }

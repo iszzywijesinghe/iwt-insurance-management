@@ -10,7 +10,7 @@
 
     <link href="./asserts/css/homestyles.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="asserts/css/style-nav-h.css">
-    <link rel="stylesheet" type="text/css" href="asserts/css/footer-styles.css">
+    <link rel="stylesheet" type="text/css" href="asserts/css/footer-index.css">
 </head>
 
 <body>

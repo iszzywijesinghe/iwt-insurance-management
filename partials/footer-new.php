@@ -1,7 +1,7 @@
 <footer>
         <div class="footer-c">
             <div class="fimage">
-            <img class="img" src="asserts/img/logobluecopy.png" alt="logo">
+            <img class="img" src="../asserts/img/logoblue.png" alt="logo">
             </div>
 
             <div class="fcontent">
