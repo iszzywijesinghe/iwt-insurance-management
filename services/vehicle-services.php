@@ -35,12 +35,13 @@ function addVehicle($customerNic, $vehicleNo, $chassisNo, $engineNo, $insuranceT
         '$vehicleNo' ,
         '$engineNo',
         '$chassisNo' ,  
-        '$insuranceType'
-        '$vehicleBrand'
-        '$vehicleModle'
-        '$vehicleValue'
+        '$insuranceType',
+        '$vehicleBrand',
+        '$vehicleModle',
+        '$vehicleValue',
         '$yom'
         )";
+        
 
         $result = mysqli_query(getConnectionInstance(), $insertQuery);
 
