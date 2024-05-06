@@ -5,6 +5,7 @@
     <title>Request Claim</title>
     <link rel="stylesheet" href="../asserts/css/request-claim-style.css">
     <link rel="stylesheet" type="text/css" href="../asserts/css/footer-new.css">
+    
 
 
 </head>
@@ -29,7 +30,7 @@ if (isset($_POST['cs-submit'])) {
     <div class="heading">
         <h1>Request Claim</h1>
     </div>
-
+<div class="formc">
     <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
         <div class="form-group">
             Customer NIC.
@@ -56,25 +57,11 @@ if (isset($_POST['cs-submit'])) {
             <input type="date" name="approved_date" id="approved_date" class="input-field">
             <br>
         </div>
-<<<<<<< HEAD
     </form>
     </div>
+    </div>
     <?php include '../partials/footer-new.php' ?>
-
-=======
-        <div class="form-group">
-            Status
-            <br>
-            <input type="text" name="status" id="status" class="input-field">
-            <br>
-        </div>
-        <br>
-        <button type="submit" name="cs-submit" class="btn btn-default">Add</button>
-    </form>
->>>>>>> fc68862066d9a8fd371ccf3b8b0af78b1365afe4
 </body>
-<div>
-    <h1 style="text-align: right;">Accident Grading Criteria</h1>
-</div>
+
 
 </html>
