@@ -10,7 +10,7 @@ function viewClaimStatus()
             $message = "Error Fetching Data" . mysqli_error(getConnectionInstance());
             echo "<script type='text/javascript'>alert('$message');</script>";
         } else {
-            return (mysqli_fetch_array($results, MYSQLI_ASSOC));
+            return ($results);
         }
     } catch (Exception $e) {
         echo $e->getMessage();
@@ -21,8 +21,7 @@ function addClamsStatus(
     $cusNic,
     $vNo,
     $reqDate,
-    $reqApprovedDate,
-    $status
+    $reqApprovedDate
 ) {
     try {
         $insertQuery = "INSERT INTO claim_status
@@ -30,14 +29,12 @@ function addClamsStatus(
             cus_nic, 
             vehicle_no, 
             request_date, 
-            approved_date, 
-            status 
+            approved_date
         ) VALUES (
             '$cusNic',
             '$vNo',
             '$reqDate',
-            '$reqApprovedDate',
-            '$status'
+            '$reqApprovedDate'
         )";
 
         $result = mysqli_query(getConnectionInstance(), $insertQuery);

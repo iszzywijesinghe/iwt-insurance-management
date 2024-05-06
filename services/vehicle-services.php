@@ -35,12 +35,13 @@ function addVehicle($customerNic, $vehicleNo, $chassisNo, $engineNo, $insuranceT
         '$vehicleNo' ,
         '$engineNo',
         '$chassisNo' ,  
-        '$insuranceType'
-        '$vehicleBrand'
-        '$vehicleModle'
-        '$vehicleValue'
+        '$insuranceType',
+        '$vehicleBrand',
+        '$vehicleModle',
+        '$vehicleValue',
         '$yom'
         )";
+        
 
         $result = mysqli_query(getConnectionInstance(), $insertQuery);
 
@@ -53,6 +54,22 @@ function addVehicle($customerNic, $vehicleNo, $chassisNo, $engineNo, $insuranceT
             echo "<script type='text/javascript'>alert('Data Inserted Sucessfully');</script>";
         }
 
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+}
+
+function getUpdateRow($id)
+{
+    try {
+        $viewQuery = "SELECT * FROM vehicle WHERE v_id = '$id'";
+        $results = mysqli_query(getConnectionInstance(), $viewQuery);
+        if (!$results) {
+            $message = "Error Fetching Data" . mysqli_error(getConnectionInstance());
+            echo "<script type='text/javascript'>alert('$message');</script>";
+        } else {
+            return ($results);
+        }
     } catch (Exception $e) {
         echo $e->getMessage();
     }

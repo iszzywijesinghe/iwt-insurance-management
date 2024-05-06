@@ -10,9 +10,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-	<div class="backgrounf">
-=======
 	<?php
 	include("../services/payment-service.php");
 
@@ -43,12 +40,11 @@
 
 
 	?>
->>>>>>> fc68862066d9a8fd371ccf3b8b0af78b1365afe4
 	<div class="dashboard">
 		
 		<div class="form-container">
 		<h2>Payments</h2><br>
-			<form action="#" method="post">
+			<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 				<div class="form-group">
 					<label for="name">Claim Id</label>
 					<input type="text" id="claim_id" name="claim_id" placeholder="Claim Id" required>
