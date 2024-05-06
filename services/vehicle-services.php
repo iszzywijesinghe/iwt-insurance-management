@@ -74,7 +74,7 @@ function getUpdateRow($id)
         echo $e->getMessage();
     }
 }
-function updateClaim($id, $customerNic, $vehicleNo, $engineNo, $chassisNo, $insuranceType, $vehicleBrand, $vehicleModle, $vehicleValue, $yom)
+function updateVehicle($id, $customerNic, $vehicleNo, $engineNo, $chassisNo, $insuranceType, $vehicleBrand, $vehicleModle, $vehicleValue, $yom)
 {
     try {
         $updateQuery = "UPDATE claim 
@@ -106,4 +106,29 @@ function updateClaim($id, $customerNic, $vehicleNo, $engineNo, $chassisNo, $insu
         echo $e->getMessage();
     }
 }
+
+function deleteVehicle($id)
+{
+    try {
+        $deleteQuery = "DELETE FROM vehicle 
+        WHERE 
+        v_id=$id";
+        
+
+        $result = mysqli_query(getConnectionInstance(), $deleteQuery);
+
+        if (!$result) {
+
+            $message = "Error Deleting Data" . mysqli_error(getConnectionInstance());
+            echo "<script type='text/javascript'>alert('$message');</script>";
+
+        } else {
+            echo "<script type='text/javascript'>alert('Item Deleted Sucessfully');</script>";
+        }
+
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+}
+
 ?>
