@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../asserts/css/footer-new.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="../asserts/js/claim-status.js"></script>
     <style>
         /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
         .row.content {
@@ -34,7 +35,14 @@ s
 
 
     
-    <?php include ("../partials/user-dashboard-navbar-sm.php"); ?>
+    <?php include ("../partials/user-dashboard-navbar-sm.php");
+    include ("../utils/url-helper.php"); 
+     $clamId = deconsturctURLFragment($_SERVER["QUERY_STRING"]);
+     $clamRow = getUpdateRow($clamId)->fetch_array(MYSQLI_ASSOC);
+     var_dump($clamRow);
+    
+    
+    ?>
 
     <div class="container-fluid">
         <div class="row content">
@@ -78,6 +86,57 @@ s
             </div>
         </div>
     </div>
+                <!-- Update Modal -->
+                <div class="modal fade" id="updateModal" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Update Clams</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post"
+                                    enctype="multipart/form-data">
+                                    <input type="hidden" name="clamId" id="clamId">
+                                    <div class="form-group">
+                                        <label>Customer NIC</label>
+                                        <input type="text" class="form-control" id="cus_nic" placeholder="Enter Customer NIC"
+                                            name="cus_nic"  value="<?php echo $clamRow["cus_nic"];?>" required  >
+                                    </div>
+                                   
+                                    <div class="form-group">
+                                        <label>Vehicle NO.</label>
+                                        <input type="text" class="form-control" id="vehicle_no" placeholder="Enter Vehicle No."
+                                            name="vehicle_no" value="<?php echo $clamRow["vehicle_no"];?>" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Request Date</label>
+                                        <input type="date" class="form-control" id="request_date" placeholder="Enter request date"
+                                            name="request_date" value="<?php echo $clamRow["request_date"];?>" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Approved Date</label>
+                                        <input type="date" class="form-control" id="approved_date" placeholder="Enter approved date"
+                                            name="approved_date" value="<?php echo $clamRow["approved_date"];?>" required>
+                                    </div>
+                                 
+                                    <button type="submit" name="v-edit-submit" class="btn btn-default">Add</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Update Modal -->
+                        
+
+
+
+
+
     <?php include '../partials/footer-new.php' ?>
 </body>
 
