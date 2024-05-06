@@ -39,7 +39,19 @@ s
     include ("../utils/url-helper.php"); 
      $clamId = deconsturctURLFragment($_SERVER["QUERY_STRING"]);
      $clamRow = getUpdateRow($clamId)->fetch_array(MYSQLI_ASSOC);
-     var_dump($clamRow);
+     
+
+     if (isset($_POST['v-edit-submit'])) {
+
+        $id = $_POST['clamId'];
+        $cusNic = $_POST['cus_nic'];
+        $vehicleNo = $_POST['vehicle_no'];
+        $requestDate = $_POST['request_date'];
+        $approvedDate = $_POST['approved_date'];
+        updateClaim($id, $cusNic, $vehicleNo, $requestDate, $approvedDate);
+    
+    }
+    
     
     
     ?>
@@ -132,7 +144,6 @@ s
                 </div>
                 <!-- End of Update Modal -->
                         
-
 
 
 
