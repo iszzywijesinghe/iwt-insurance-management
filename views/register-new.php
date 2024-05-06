@@ -16,17 +16,17 @@
 
     if (isset($_POST['Register'])) {
 
-        $customerNic = $_POST['cus_nic'];
-        $firstname = $_POST['first_name'];
-        $lastname = $_POST['last_name'];
+        $customerNic = $_POST['CustomerNic'];
+        $firstname = $_POST['FirstName'];
+        $lastname = $_POST['LastName'];
         $email= $_POST['email'];
-        $houseno = $_POST['house_no'];
-        $streetno = $_POST['street_no'];
+        $houseno = $_POST['Houseno'];
+        $streetno = $_POST['streetno'];
         $city= $_POST['city'];
-        $gender= $_POST['gender'];
-        $contactno= $_POST['contact_no'];
+        $gender= $_POST['Gender'];
+        $contactno= $_POST['contactno'];
 
-        adduser($cusnic, $firstname,	$lastname,	$email,	$houseno, $streetno, $city, $gender, $contactno);
+        adduser($customerNic, $firstname, $lastname,	$email,	$houseno, $streetno, $city, $gender, $contactno);
 
         // TODO: Debug this logic
         // if (
@@ -67,7 +67,7 @@
             <!--center container-->
             <div class="center_container1">
                 <div class="form_container">
-                    <form id="registerForm">
+                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
                         <h1>Register Now!!!</h1>
                         <p class="intro-paragraph">Welcome to our MotorGuard Vehicle Insurance Company. 
                             With our user-friendly interface, registering your new vehicle is a breeze. 
@@ -91,7 +91,7 @@
                         </div><br>
                         <div class="form-group">
                             <label class="lable_name" for="email">Email : </label><br>
-                            <input type="text" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required>
                         </div><br>
                         <div class="form-group">
                             <label class="lable_name" for="Houseno">House no : </label><br>
@@ -109,6 +109,10 @@
                             <label class="lable_name"  for="Gender">Gender : </label><br>
                             <input type="text" id="Gender" name="Gender" required>
                         </div><br>
+                        <div class="form-group">
+                            <label class="lable_name"  for="contactno">contactno : </label><br>
+                            <input type="number" id="contact" name="contactno" required>
+                        </div><br>
                        
                     </div>
                         <br>
@@ -118,11 +122,12 @@
                     <input type="checkbox" name="agree" class="checkbox">
                     <label for="agree" >I certify that the above information is true and that I agree to the terms & conditions mentiond in the insurance policy statement of the company.</label><br>
                         
-                    </form>
+                    
                         <br>
-                        <button name = "Register" type="submit">Register</button>
-                    </form> 
+                        <button name="Register" type="submit">Register</button>
+                    
                 </div>
+                </form> 
             </div>
 
            

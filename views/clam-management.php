@@ -53,8 +53,6 @@
 
     }
 
-<<<<<<< HEAD
-=======
     // update logic 
     $clamId = deconsturctURLFragment($_SERVER["QUERY_STRING"]);
     $clamRow = getUpdateRow($clamId)->fetch_array(MYSQLI_ASSOC);
@@ -71,7 +69,6 @@
     }
 
 
->>>>>>> ebc7156f69fea972939768ce773fd9a398607f2c
     ?>
 
     <div class="container-fluid">

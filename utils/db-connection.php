@@ -6,7 +6,7 @@ function getConnectionInstance()
         $host = "localhost";
         $username = "root";
         $password = "";
-        $database = "isdm-insurance-management";
+        $database = "iwt-insurance-management";
         $conn = mysqli_connect($host, $username, $password);
         mysqli_select_db($conn,$database);
         return $conn;
