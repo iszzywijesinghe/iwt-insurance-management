@@ -129,7 +129,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Add Clams</h4>
+                                <h4 class="modal-title">Add Feedback</h4>
                             </div>
                             <div class="modal-body">
                                 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
@@ -163,7 +163,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Update Clams</h4>
+                                <h4 class="modal-title">Update Feedback</h4>
                             </div>
                             <div class="modal-body">
                                 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
