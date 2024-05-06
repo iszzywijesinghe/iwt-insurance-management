@@ -53,6 +53,25 @@
 
     }
 
+<<<<<<< HEAD
+=======
+    // update logic 
+    $clamId = deconsturctURLFragment($_SERVER["QUERY_STRING"]);
+    $clamRow = getUpdateRow($clamId)->fetch_array(MYSQLI_ASSOC);
+
+    if (isset($_POST['v-edit-submit'])) {
+
+        $id = $_POST['clamId'];
+        $vehicleNo = $_POST['update-v-no'];
+        $vehiclePhotos = $_POST['update-v-photos'];
+        $date = $_POST['update-v-date'];
+        $grade = $_POST['update-v-grade'];
+        updateClaim($id, $vehicleNo, $vehiclePhotos, $date, $grade);
+
+    }
+
+
+>>>>>>> ebc7156f69fea972939768ce773fd9a398607f2c
     ?>
 
     <div class="container-fluid">
@@ -162,28 +181,30 @@
                                     <div class="form-group">
                                         <label>Vehicle No</label>
                                         <input type="text" class="form-control" id="v-no" placeholder="Enter Vehicle no"
-                                            name="v-no"  value="<?php echo $clamRow["vehicle_no"];?>" required  >
+                                            name="update-v-no" value="<?php echo $clamRow["vehicle_no"]; ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <!-- TODO: Should be a file uploader -->
                                         <label>Vehicle Photos</label>
                                         <input type="text" class="form-control" id="v-photos"
-                                            placeholder="Enter Vehicle Photos" name="v-photos" value="<?php echo $clamRow["vehicle_photos"];?>" required>
+                                            placeholder="Enter Vehicle Photos" name="update-v-photos"
+                                            value="<?php echo $clamRow["vehicle_photos"]; ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Date</label>
                                         <input type="date" class="form-control" id="v-date" placeholder="Enter Date"
-                                            name="v-date" value="<?php echo $clamRow["date"];?>" required>
+                                            name="update-v-date" value="<?php echo $clamRow["date"]; ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Grade</label>
-                                        <select class="form-select form-select-lg" name="v-grade" value="<?php echo $clamRow["accident_grade"];?>" required>
+                                        <select class="form-select form-select-lg" name="update-v-grade"
+                                            value="<?php echo $clamRow["accident_grade"]; ?>" required>
                                             <option>A</option>
                                             <option>B</option>
                                             <option>C</option>
                                         </select>
                                     </div>
-                                    <button type="submit" name="v-edit-submit" class="btn btn-default">Add</button>
+                                    <button type="submit" name="v-edit-submit" class="btn btn-default">Edit</button>
                                 </form>
                             </div>
                             <div class="modal-footer">

@@ -45,7 +45,7 @@
 
         // addFeedback($fbId, $rate, $des, $nic);
 
-        echo $rate;
+        
 
         // TODO: Debug this logic
         // if (
@@ -73,17 +73,14 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Claim Id</th>
-                            <th>Vehicle No</th>
-                            <th>Vehicle Photos</th>
-                            <th>Date</th>
-                            <th>Accident Grade</th>
+                            <th>Rate</th>
+                            <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        if (viewClams()->num_rows > 0) {
-                            foreach (viewClams()->fetch_all() as $clam) {
+                        if (viewFeedback()->num_rows > 0) {
+                            foreach (viewFeedback()->fetch_all() as $clam) {
                                 echo "<tr>";
                                 echo "<td>" . $clam[0] . "</td>";
                                 echo "<td>" . $clam[1] . "</td>";
@@ -96,51 +93,7 @@
                     </tbody>
                 </table>
 
-                <div class="modal fade" id="myModal" role="dialog">
-                    <div class="modal-dialog">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title">Add Clams</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post"
-                                    enctype="multipart/form-data">
-                                    <div class="form-group">
-                                        <label>Vehicle No</label>
-                                        <input type="text" class="form-control" id="v-no" placeholder="Enter Vehicle no"
-                                            name="v-no" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <!-- TODO: Should be a file uploader -->
-                                        <label>Vehicle Photos</label>
-                                        <input type="text" class="form-control" id="v-photos"
-                                            placeholder="Enter Vehicle Photos" name="v-photos" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Date</label>
-                                        <input type="date" class="form-control" id="v-date" placeholder="Enter Date"
-                                            name="v-date" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Grade</label>
-                                        <select class="form-select form-select-lg" name="v-grade" required>
-                                            <option>A</option>
-                                            <option>B</option>
-                                            <option>C</option>
-                                        </select>
-                                    </div>
-                                    <button type="submit" name="v-submit" class="btn btn-default">Add</button>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
