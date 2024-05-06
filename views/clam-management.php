@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include ("../services/clam-management-service.php"); ?>
+<?php include ("../services/clam-management-service.php");
+?>
 
 <head>
     <title>Bootstrap Example</title>
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="../asserts/js/clam-management.js"></script>
     <style>
         /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
         .row.content {
@@ -31,30 +33,24 @@
 </head>
 
 <body>
-
-
     <?php
     include ("../partials/user-dashboard-navbar-sm.php");
+    include ("../utils/url-helper.php");
 
+    // add logic
     if (isset($_POST['v-submit'])) {
 
         $vehicleNo = $_POST['v-no'];
         $vehiclePhotos = $_POST['v-photos'];
         $date = $_POST['v-date'];
         $grade = $_POST['v-grade'];
-
         addClams($vehicleNo, $vehiclePhotos, $date, $grade);
-
-        // TODO: Debug this logic
-        // if (
-        //     !empty($vehicleNo) ||
-        //     !empty($vehiclePhotos) ||
-        //     !empty($date) ||
-        //     !empty($grade)
-        // ) {
-        //     addClams($vehicleNo, $vehiclePhotos, $date, $grade);
-        // }
     }
+
+    // update logic 
+    $clamId = deconsturctURLFragment($_SERVER["QUERY_STRING"]);
+    $clamRow = getUpdateRow($clamId)->fetch_array(MYSQLI_ASSOC);
+
 
 
     ?>
@@ -92,7 +88,7 @@
                                 echo "<td>";
                                 echo "<div>";
                                 // echo " <form method='post' enctype='multipart/form-data'>";
-                                echo " <button data-toggle='modal' data-target='#updateModal '" . $clam[0] . "'' class='btn btn-primary'>Edit</button>";
+                                echo " <button onclick='getClamId(" . $clam[0] . ")' data-toggle='modal' data-target='#updateModal' class='btn btn-primary edit'>Edit</button>";
                                 // echo " </form>";
                                 echo "</div>";
                                 echo "</td>";
@@ -101,6 +97,7 @@
                         } ?>
                     </tbody>
                 </table>
+
 
                 <!-- Insert Modal -->
                 <div class="modal fade" id="myModal" role="dialog">
@@ -159,36 +156,34 @@
                                 <h4 class="modal-title">Update Clams</h4>
                             </div>
                             <div class="modal-body">
-                                <?php 
-                                var_dump(getUpdateRow($clam[0])->fetch_array(MYSQLI_ASSOC));
-                                ?>
                                 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post"
                                     enctype="multipart/form-data">
+                                    <input type="hidden" name="clamId" id="clamId">
                                     <div class="form-group">
                                         <label>Vehicle No</label>
                                         <input type="text" class="form-control" id="v-no" placeholder="Enter Vehicle no"
-                                            name="v-no" required>
+                                            name="v-no"  value="<?php echo $clamRow["vehicle_no"];?>" required  >
                                     </div>
                                     <div class="form-group">
                                         <!-- TODO: Should be a file uploader -->
                                         <label>Vehicle Photos</label>
                                         <input type="text" class="form-control" id="v-photos"
-                                            placeholder="Enter Vehicle Photos" name="v-photos" required>
+                                            placeholder="Enter Vehicle Photos" name="v-photos" value="<?php echo $clamRow["vehicle_photos"];?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Date</label>
                                         <input type="date" class="form-control" id="v-date" placeholder="Enter Date"
-                                            name="v-date" required>
+                                            name="v-date" value="<?php echo $clamRow["date"];?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label>Grade</label>
-                                        <select class="form-select form-select-lg" name="v-grade" required>
+                                        <select class="form-select form-select-lg" name="v-grade" value="<?php echo $clamRow["accident_grade"];?>" required>
                                             <option>A</option>
                                             <option>B</option>
                                             <option>C</option>
                                         </select>
                                     </div>
-                                    <button type="submit" name="v-submit" class="btn btn-default">Add</button>
+                                    <button type="submit" name="v-edit-submit" class="btn btn-default">Add</button>
                                 </form>
                             </div>
                             <div class="modal-footer">
