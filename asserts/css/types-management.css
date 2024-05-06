@@ -1,3 +1,18 @@
+@charset "UTF-8";
+
+:root{
+    --max_width:1200px;
+}
+
+
+
+body{
+    /* margin:0;
+    padding:0; */
+    overflow-x: hidden;
+}
+
+
 body {
 	font-family: Arial, sans-serif;
 	margin: 0;
@@ -50,12 +65,14 @@ th, td {
 }
 
 .form-container {
+	
 	width: 700px;
-	margin: 60px auto;
+margin-left: 380px;
 	padding: 10px;
-	/* border: 1px solid #ccc; */
 	border-radius: 5px;
-	/* background-color: #f9f9f9; */
+	color: white;
+	
+	
 }
 
 .form-group {
@@ -104,9 +121,9 @@ select {
 }
 
 button {
-	background-color: darkblue;
+	background-color: white;
 	border: none;
-	color: white;
+	color: darkblue;
 	padding: 15px 20px;
 	border-radius: 10px;
 	width: 40%;
@@ -119,7 +136,7 @@ button {
 }
 
 button:hover {
-	background-color: black;
+	background-color: blue;
 	color: white;
 }
 
@@ -136,3 +153,43 @@ button:hover {
 	border: 1px solid rgb(217, 216, 216);
 	border-radius: 8px;
 }
+
+.heading1{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+	line-height: 10px;
+}
+
+.image_hover{
+    width: 100vw;
+    height: 560px;
+    background-color: darkblue;
+}
+
+.car_image{
+    width: 100vw;
+    height: 560px;
+    opacity: 60%;
+
+}
+
+.middle{
+	background-color: darkblue;
+	margin-top: 0%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	height: fit-content;
+	width: 100vw;
+	
+}
+
+.des{
+	font-size: 40px;
+}
+

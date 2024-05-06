@@ -41,6 +41,7 @@ body{
     color: white;
     width: 100vw;
     height: 900px;
+    margin: auto;
 }
 
 .footer-container{
@@ -81,4 +82,33 @@ button {
 button:hover {
     background-color: blue;
     color: white;
+}
+
+.heading1{
+    position: absolute;
+    top: 54%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.image_hover{
+    width: 100vw;
+    height: 560px;
+    background-color: darkblue;
+}
+
+.car_image{
+    width: 100vw;
+    height: 560px;
+    opacity: 60%;
+
+}
+
+.des{
+    font-size: 17px;
+    
 }

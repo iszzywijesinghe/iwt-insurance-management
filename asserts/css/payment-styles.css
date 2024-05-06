@@ -48,11 +48,14 @@ th, td {
 
 .form-container {
 	width: 700px;
+	height: fit-content;
 	margin: 60px auto;
 	padding: 10px;
-	/* border: 1px solid #ccc; */
-	border-radius: 5px;
-	/* background-color: #f9f9f9; */
+	border: 2px solid white;
+	border-radius: 10px;
+	color: white;
+	padding-bottom: 30px;
+	
 }
 
 .form-group {
@@ -101,9 +104,9 @@ select {
 }
 
 button {
-	background-color: darkblue;
+	background-color: white;
 	border: none;
-	color: white;
+	color: darkblue;
 	padding: 15px 20px;
 	border-radius: 10px;
 	width: 40%;
@@ -116,7 +119,7 @@ button {
 }
 
 button:hover {
-	background-color: black;
+	background-color: blue;
 	color: white;
 }
 
@@ -132,4 +135,16 @@ button:hover {
 	width: 8%;
 	border: 1px solid rgb(217, 216, 216);
 	border-radius: 8px;
+}
+
+.backgrounf{
+	background-color: darkblue;
+}
+.Payment-Page{
+	color: white;
+}
+
+
+h2{
+	text-align: center;
 }

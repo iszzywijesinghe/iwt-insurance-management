@@ -1,12 +1,16 @@
 
 .form-container {
     width: 500px;
-    margin: 0 auto;
+    margin: 60px auto;
+    height: 700px;
+   
+    padding: 20px;
   }
   
   
   .form-group {
     margin-bottom: 20px;
+    
   }
   
   .input-field {
@@ -24,8 +28,8 @@
   
   
   .submit-button {
-    background-color:blue;
-    color: white;
+    background-color:white;
+    color: darkblue;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -33,6 +37,28 @@
   }
   
   .submit-button:hover {
-    background-color:lightblue;
+    background-color:white;
+  }
+
+  .background{
+    background-color: darkblue;
+    width: 100vw;
+    height: 600px;
+    color: white;
   }
   
+  .heading{
+    text-align: center;
+    padding-top: 5px;
+  }
+
+  .formc{
+   
+    width: 700px;
+    height: 400px;
+    text-align: center;
+    margin: auto;
+    padding-top: 30px;
+  }
+
+ 

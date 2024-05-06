@@ -4,64 +4,64 @@
 <head>
     <title>Request Claim</title>
     <link rel="stylesheet" href="../asserts/css/request-claim-style.css">
+    <link rel="stylesheet" type="text/css" href="../asserts/css/footer-new.css">
+    
+
 
 </head>
+<?php
+include("../services/claim-status-service.php");
+
+if (isset($_POST['cs-submit'])) {
+
+    $cusNic = $_POST['cus_nic'];
+    $vehicleNo = $_POST['vehicle_no'];
+    $requestDate = $_POST['request_date'];
+    $approvedDate = $_POST['approved_date'];
+    $status = $_POST['status'];
+
+    addClamsStatus($cusNic, $vehicleNo, $requestDate, $approvedDate, $status);
+}
+
+?>
 
 <body>
+    <div class="background">
     <div class="heading">
         <h1>Request Claim</h1>
     </div>
-
-    
-    <form method="post" action="" class="form-container">
+<div class="formc">
+    <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
         <div class="form-group">
-        Vehicle No.<input type="text" name="vehicle_no"  class="input-field"><br>
-        <br>
-        </div>
-        <div class="form-group">
-        <label for="Grades" name="accident_grade" >Accident Grade</label>
-        <select id="Grades" name="Grades" class="input-field">
-            <option value="Type of Grade">Grade A</option>
-            <option value="Type of Grade">Grade B</option>
-            <option value="Type of Grade">Grade C</option>
-        </select>
-        <br>
+            Customer NIC.
+            <br>
+            <input type="text" name="cus_nic" id="cus_nic" class="input-field">
+            <br>
         </div>
         <br>
         <div class="form-group">
-        Accident Date &
-        Time<input type="date" name="date" class="input-field"><br>
-        <br>
-        <input type="time" name="time" class="input-field"><br>
-        <br>
+            Vehicle No.
+            <br>
+            <input type="text" name="vehicle_no" id="vehicle_no" class="input-field">
+            <br>
         </div>
         <div class="form-group">
-        <label for="image" name="v_photos">Evidence(Insert Clear Photo)</label><br>
-        <input type="file" id="image" name="image" accept="image/*" ><br><br>
-        <input type="submit" value="Upload Image">
-        <br><br>
+            Request Date.
+            <br>
+            <input type="date" name="request_date" id="request_date" class="input-field">
+            <br>
         </div>
         <div class="form-group">
-        Additional Details<br>
-        <textarea rows="4" cols="25" name="additional_details" class="input-field"></textarea>
-        <br><br>
-        <input type="checkbox" value="yes">
-        <label for="agree">I agreed to all terms and conditions.</label>
-        <input type="Submit" value="Submit" class="submit-button" >
+            Approved Date.
+            <br>
+            <input type="date" name="approved_date" id="approved_date" class="input-field">
+            <br>
         </div>
-
-
-
-
-
-
-
     </form>
-
-
-
-
-
+    </div>
+    </div>
+    <?php include '../partials/footer-new.php' ?>
 </body>
+
 
 </html>

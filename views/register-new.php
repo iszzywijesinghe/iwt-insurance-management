@@ -7,9 +7,46 @@
         
         <link rel="stylesheet" href="../asserts/css/Regstylesheet.css">
         <link rel="stylesheet" type="text/css" href="../asserts/css/style-nav-h.css">
-        <link rel="stylesheet" type="text/css" href="../asserts/css/footer-styles.css">
+        <link rel="stylesheet" type="text/css" href="../asserts/css/footer-new.css">
     </head>
     <body>
+
+    <?php
+    include ("../services/register-service.php");
+
+    if (isset($_POST['Register'])) {
+
+        $customerNic = $_POST['cus_nic'];
+        $firstname = $_POST['first_name'];
+        $lastname = $_POST['last_name'];
+        $email= $_POST['email'];
+        $houseno = $_POST['house_no'];
+        $streetno = $_POST['street_no'];
+        $city= $_POST['city'];
+        $gender= $_POST['gender'];
+        $contactno= $_POST['contact_no'];
+
+        adduser($cusnic, $firstname,	$lastname,	$email,	$houseno, $streetno, $city, $gender, $contactno);
+
+        // TODO: Debug this logic
+        // if (
+        //     !empty($vehicleNo) ||
+        //     !empty($vehiclePhotos) ||
+        //     !empty($date) ||
+        //     !empty($grade)
+        // ) {
+        //     addClams($vehicleNo, $vehiclePhotos, $date, $grade);
+        // }
+    }
+
+    ?>
+
+
+
+
+
+
+
             <!--navbar container-->
             <?php include '../partials/nav-bar-h.php' ?>
 
@@ -80,17 +117,17 @@
                     </div>
                     <input type="checkbox" name="agree" class="checkbox">
                     <label for="agree" >I certify that the above information is true and that I agree to the terms & conditions mentiond in the insurance policy statement of the company.</label><br>
+                        
+                    </form>
                         <br>
-                        <br>
-                        <br>
-                        <button type="submit">Register</button>
+                        <button name = "Register" type="submit">Register</button>
                     </form> 
                 </div>
             </div>
 
            
    <!--footer container-->
-   <?php include '../partials/footer-index.php' ?>
+   <?php include '../partials/footer-new.php' ?>
             
 
 

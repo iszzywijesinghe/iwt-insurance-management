@@ -4,7 +4,7 @@
         <title>Insurance Types</title>
         <link rel="stylesheet" type="text/css" href="../asserts/css/insurance-type.css">
         <link rel="stylesheet" type="text/css" href="../asserts/css/style-nav-h.css">
-        <link rel="stylesheet" type="text/css" href="../asserts/css/footer-styles.css">
+        <link rel="stylesheet" type="text/css" href="../asserts/css/footer-new.css">
     </head>
 
     <body>
@@ -28,8 +28,6 @@
              </ul>
              </div>
 <!--footer container-->
-<div class="footer-container">
-            <?php include '../partials/footer-index.php' ?>
-        </div>
+<?php include '../partials/footer-new.php' ?>
     </body>
 </html>

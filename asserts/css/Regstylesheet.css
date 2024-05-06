@@ -32,7 +32,7 @@ body {
 .center_container {
     
     width: 100vw;
-    height: 1100px;
+    height: 1150px;
     background-color: darkblue;
     padding-top: 50px;
 }
@@ -143,3 +143,6 @@ button:hover {
     background-color: blue;
     color: white;
 }
+
+
+
