@@ -30,8 +30,17 @@
     </style>
 </head>
 
+
+
 <body>
     <?php include("../services/register-service.php");
+    // Delete logic
+    
+    if (isset($_POST['v-delete-submit'])) {
+        $id = $_POST['clamId'];
+        deleteClaim($id);
+    }
+
     ?>
     <div class="container-fluid">
         <div class="row content">
@@ -70,10 +79,12 @@
                                 echo "<td>" . $clam[7] . "</td>";
                                 echo "<td>" . $clam[8] . "</td>";
                                 echo "<td>";
-                                echo "<div>";
-                                // echo " <form method='post' enctype='multipart/form-data'>";
+                                echo "<div style='flex-direction: row; display:flex; gap:10px;'>";
                                 echo " <button onclick='getCustomerid(" . $clam[0] . ")' data-toggle='modal' data-target='#updateModal' class='btn btn-primary edit'>Edit</button>";
-                                // echo " </form>";
+                                echo " <form method='post' enctype='multipart/form-data'>";
+                                echo " <input type='hidden' name='clamId' id='clamId' value=" . $clam[0] . " >";
+                                echo " <button type='submit' name='v-delete-submit' class='btn btn-danger'>Delete</button>";
+                                echo " </form>";
                                 echo "</div>";
                                 echo "</td>";
                                 echo "</tr>";

@@ -108,6 +108,28 @@ function updateuser($id, $cusnic, $firstname,	$lastname,	$email,	$houseno, $stre
     }
 }
 
+function deleteClaim($id)
+{
+    try {
+        $deleteQuery = "DELETE FROM customer
+        WHERE 
+        claim_id=$id";
+
+        $result = mysqli_query(getConnectionInstance(), $deleteQuery);
+
+        if (!$result) {
+
+            $message = "Error Deleting Data" . mysqli_error(getConnectionInstance());
+            echo "<script type='text/javascript'>alert('$message');</script>";
+
+        } else {
+            echo "<script type='text/javascript'>alert('Item Deleted Sucessfully');</script>";
+        }
+
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+}
 
 
 
