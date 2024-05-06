@@ -94,3 +94,26 @@ function updateClaim($id, $cusNic, $vehicleNo, $requestDate, $approvedDate)
         echo $e->getMessage();
     }
 }
+
+function deleteClaim($id)
+{
+    try {
+        $deleteQuery = "DELETE FROM claim_status 
+        WHERE 
+        claim_id=$id";
+
+        $result = mysqli_query(getConnectionInstance(), $deleteQuery);
+
+        if (!$result) {
+
+            $message = "Error Deleting Data" . mysqli_error(getConnectionInstance());
+            echo "<script type='text/javascript'>alert('$message');</script>";
+
+        } else {
+            echo "<script type='text/javascript'>alert('Item Deleted Sucessfully');</script>";
+        }
+
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+}
