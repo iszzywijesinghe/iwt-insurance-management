@@ -33,6 +33,7 @@ s
 <body>
 
 
+    
     <?php include ("../partials/user-dashboard-navbar-sm.php"); ?>
 
     <div class="container-fluid">
@@ -48,19 +49,31 @@ s
                             <th>Vehicle No</th>
                             <th>Request Date</th>
                             <th>Approved Date</th>
+                            <th>Actions</th>
+                            
                             
                         </tr>
                     </thead>
-                    <!-- <tbody>
-                        <?php while ($row = viewClams()) {
-                            echo "<tr>";
-                            echo "<td>" . $row["claim_status_id"] . "</td>";
-                            echo "<td>" . $row["vehicle_no"] . "</td>";
-                            echo "<td>" . $row["request_date"] . "</td>";
-                            echo "<td>" . $row["approved_date"] . "</td>";
-                            echo "</tr>";
+                     <tbody>
+                        <?php if (viewClaimStatus()->num_rows > 0) {
+                            foreach (viewClaimStatus()->fetch_all() as $clam) {
+                                echo "<tr>";
+                                echo "<td>" . $clam[0] . "</td>";
+                                echo "<td>" . $clam[1] . "</td>";
+                                echo "<td>" . $clam[2] . "</td>";
+                                echo "<td>" . $clam[3] . "</td>";
+                                echo "<td>" . $clam[4] . "</td>";
+                                echo "<td>";
+                                echo "<div>";
+                                // echo " <form method='post' enctype='multipart/form-data'>";
+                                echo " <button onclick='getClamId(" . $clam[0] . ")' data-toggle='modal' data-target='#updateModal' class='btn btn-primary edit'>Edit</button>";
+                                // echo " </form>";
+                                echo "</div>";
+                                echo "</td>";
+                                echo "</tr>";
+                            }
                         } ?>
-                    </tbody> -->
+                    </tbody> 
                 </table>
             </div>
         </div>

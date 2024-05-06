@@ -18,9 +18,9 @@ if (isset($_POST['cs-submit'])) {
     $vehicleNo = $_POST['vehicle_no'];
     $requestDate = $_POST['request_date'];
     $approvedDate = $_POST['approved_date'];
-    $status = $_POST['status'];
+   // $status = $_POST['status'];
 
-    addClamsStatus($cusNic, $vehicleNo, $requestDate, $approvedDate, $status);
+    addClamsStatus($cusNic, $vehicleNo, $requestDate, $approvedDate);
 }
 
 ?>
@@ -57,10 +57,17 @@ if (isset($_POST['cs-submit'])) {
             <input type="date" name="approved_date" id="approved_date" class="input-field">
             <br>
         </div>
+        <div>
+            <input type="submit" name="cs-submit" value="submit">
+        </div>
+        
     </form>
     </div>
     </div>
     <?php include '../partials/footer-new.php' ?>
+
+
+ 
 </body>
 
 
