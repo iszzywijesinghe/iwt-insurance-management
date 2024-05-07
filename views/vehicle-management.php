@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-<title>Bootstrap Example</title>
+<title>Vehicle</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="../asserts/js/clam-management.js"></script>
+   
+    <script src="../asserts/js/vehicle-management.js"></script>
     <style>
         /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
         .row.content {
@@ -40,7 +41,38 @@
 
     // add logic
 
-    if (isset($_POST['Register'])) {
+    // if (isset($_POST['Register'])) {
+
+    //     $customerNic = $_POST['cus_nic'];
+    //     $vehicleNo = $_POST['vehicle_no'];
+    //     $engineNo = $_POST['engine_no'];
+    //     $chassisNo = $_POST['chassis_no'];
+    //     $insuranceType = $_POST['insurance_type'];
+    //     $vehicleBrand = $_POST['vehicle_brand'];
+    //     $vehicleModle = $_POST['vehicle_modle'];
+    //     $vehicleValue = $_POST['vehicle_value'];
+    //     $yom = $_POST['yom'];
+
+
+    //     addVehicle($customerNic, $vehicleNo, $chassisNo, $engineNo, $insuranceType, $vehicleBrand, $vehicleModle, $vehicleValue, $yom);
+
+
+    // }
+
+    // update logic 
+    $clamId = deconsturctURLFragment($_SERVER["QUERY_STRING"]);
+
+    $clamRow = getUpdateRow($clamId);
+    if ($clamRow) {
+        $clamRow = $clamRow->fetch_array(MYSQLI_ASSOC);
+        // Rest of your code for processing $clamRow
+    } else {
+        // Handle the case when no row is found
+        echo "No row found for the given clamId.";
+    }
+
+
+    if (isset($_POST['v-edit-submit'])) {
 
         $customerNic = $_POST['cus_nic'];
         $vehicleNo = $_POST['vehicle_no'];
@@ -52,17 +84,16 @@
         $vehicleValue = $_POST['vehicle_value'];
         $yom = $_POST['yom'];
 
-
-        addVehicle($customerNic, $vehicleNo, $chassisNo, $engineNo, $insuranceType, $vehicleBrand, $vehicleModle, $vehicleValue, $yom);
-
+        updateVehicle($id, $customerNic, $vehicleNo, $engineNo, $chassisNo, $insuranceType, $vehicleBrand, $vehicleModle, $vehicleValue, $yom);
 
     }
 
-    // update logic 
-    $vId = deconsturctURLFragment($_SERVER["QUERY_STRING"]);
-    $clamRow = getUpdateRow($vId)->fetch_array(MYSQLI_ASSOC);
-
-
+    // Delete logic
+    
+    if (isset($_POST['v-delete-submit'])) {
+        $id = $_POST['vId'];
+        deleteVehicle($id);
+    }
 
     ?>
 
@@ -72,9 +103,7 @@
             <?php include ("../partials/user-dashboard-navbar-md.php"); ?>
             <br>
             <div class="col-sm-9">
-                <button style="margin-bottom: 45px;" type="button" class="btn btn-info btn-lg" data-toggle="modal"
-                    data-target="#myModal">
-                    Add Vehicle</button>
+                
 
 <table class="table table-bordered">
                     <thead>
@@ -106,10 +135,12 @@
                                 echo "<td>" . $vehicle[7] . "</td>";
                                 echo "<td>" . $vehicle[8] . "</td>";
                                 echo "<td>";
-                                echo "<div>";
-                                // echo " <form method='post' enctype='multipart/form-data'>";
+                                echo "<div style='flex-direction: row; display:flex; gap:10px;'>";
                                 echo " <button onclick='getVehicleId(" . $vehicle[0] . ")' data-toggle='modal' data-target='#updateModal' class='btn btn-primary edit'>Edit</button>";
-                                // echo " </form>";
+                                echo " <form method='post' enctype='multipart/form-data'>";
+                                echo " <input type='hidden' name='vId' id='vId' value=" . $vehicle[0] . " >";
+                                echo " <button type='submit' name='v-delete-submit' class='btn btn-danger'>Delete</button>";
+                                echo " </form>";
                                 echo "</div>";
                                 echo "</td>";
                                 echo "</tr>";
@@ -132,7 +163,7 @@
                             <div class="modal-body">
                                 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post"
                                     enctype="multipart/form-data">
-                                    <input type="hidden" name="vId" id="v_id">
+                                    <input type="hidden" name="vId" id="vId">
                                     <div class="form-group">
                                         <label>Customer NIC</label>
                                         <input type="text" class="form-control" id="cus_nic" placeholder="Enter cus_nic"
@@ -155,6 +186,12 @@
                                         <label>Chassis No</label>
                                         <input type="text" class="form-control" id="chassis_no" placeholder="Enter chassis_no"
                                             name="chassis_no"  value="<?php echo $clamRow["chassis_no"];?>" required  >
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- TODO: Should be a file uploader -->
+                                        <label>Insrance Type</label>
+                                        <input type="text" class="form-control" id="insurance_type" placeholder="Enter insurance_type"
+                                            name="insurance_type"  value="<?php echo $clamRow["insurance_type"];?>" required  >
                                     </div>
                                     <div class="form-group">
                                         <!-- TODO: Should be a file uploader -->
@@ -193,7 +230,7 @@
                     </div>
                 </div>
                 
-                
+    
                 </body>
 
                 </html>

@@ -2,16 +2,16 @@
 <?php include ("../services/claim-status-service.php"); ?>
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>View Claim Status</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../asserts/css/footer-new.css">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="../asserts/js/claim-status.js"></script>
     <style>
-        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
         .row.content {
             height: 550px
         }
@@ -21,7 +21,7 @@
             background-color: #f1f1f1;
             height: 100%;
         }
-s
+
         /* On small screens, set height to 'auto' for the grid */
         @media screen and (max-width: 767px) {
             .row.content {
@@ -157,7 +157,7 @@ s
 
 
 
-    <?php include '../partials/footer-new.php' ?>
+    
 </body>
 
 </html>
