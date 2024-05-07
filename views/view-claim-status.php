@@ -71,10 +71,11 @@ s
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>Status</th>
+                            <th>Customer NIC</th>
                             <th>Vehicle No</th>
                             <th>Request Date</th>
                             <th>Approved Date</th>
+                            <th>Status</th>
                             <th>Actions</th>
                             
                             
@@ -84,11 +85,12 @@ s
                         <?php if (viewClaimStatus()->num_rows > 0) {
                             foreach (viewClaimStatus()->fetch_all() as $clam) {
                                 echo "<tr>";
-                                echo "<td>" . $clam[0] . "</td>";
                                 echo "<td>" . $clam[1] . "</td>";
                                 echo "<td>" . $clam[2] . "</td>";
                                 echo "<td>" . $clam[3] . "</td>";
                                 echo "<td>" . $clam[4] . "</td>";
+                                echo "<td>" . $clam[5] . "</td>";
+                                echo "<td>";
                                 echo "<div style='flex-direction: row; display:flex; gap:10px;'>";
                                 echo " <button onclick='getClamId(" . $clam[0] . ")' data-toggle='modal' data-target='#updateModal' class='btn btn-primary edit'>Edit</button>";
                                 echo " <form method='post' enctype='multipart/form-data'>";

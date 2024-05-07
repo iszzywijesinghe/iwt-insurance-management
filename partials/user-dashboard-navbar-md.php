@@ -4,7 +4,7 @@
         <li class="active"><a href="#section1">Dashboard</a></li>
         <li><a href="../views/clam-management.php">Clam Management</a></li>
         <li><a href="../views/vehicle-management.php">Vehicle Management</a></li>
-        <li><a href="#section3">Gender</a></li>
-        <li><a href="#section3">Geo</a></li>
+        <li><a href="../views/insurance-type-management.php">Insurance Type Management</a></li>
+        <li><a href="../views/feedback-management.php">Feedback Management</a></li>
     </ul><br>
 </div>

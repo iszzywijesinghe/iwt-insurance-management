@@ -33,8 +33,6 @@
 </head>
 
 <?php
-    include ("../services/vehicle-services.php");
-
     if (isset($_POST['Register'])) {
 
         $customerNic = $_POST['cus_nic'];
